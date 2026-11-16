@@ -1,0 +1,4045 @@
+{
+  "pack_id": "calculus1",
+  "subject": "Calculus 1",
+  "pack_version": "2.1.0",
+  "content_hash": "68f3f6aeff863056",
+  "topics": [
+    {
+      "id": "derivatives",
+      "name": "Derivatives",
+      "i18n": {
+        "fr": "Dérivées",
+        "it": "Derivate"
+      }
+    },
+    {
+      "id": "chain-rule",
+      "name": "The chain rule",
+      "i18n": {
+        "fr": "La dérivation en chaîne",
+        "it": "La regola della catena"
+      }
+    },
+    {
+      "id": "critical-points",
+      "name": "Critical points",
+      "i18n": {
+        "fr": "Points critiques",
+        "it": "Punti critici"
+      }
+    },
+    {
+      "id": "closed-interval",
+      "name": "Max & min on closed intervals",
+      "i18n": {
+        "fr": "Max et min sur un intervalle fermé",
+        "it": "Max e min su intervalli chiusi"
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "yt-der-01",
+      "topic": "derivatives",
+      "difficulty": 1,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = 3 x^{4} - 5 x + \\frac{2}{x^{3}}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "0": "-5",
+          "-4": "-6",
+          "3": "12"
+        }
+      },
+      "answer_latex": "f'(x) = 12 x^{3} - 5 - \\frac{6}{x^{4}}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Rewrite each fraction as a power of x first, e.g. 2/x^3 = 2x^(-3).",
+      "solution": [
+        {
+          "text": "Rewrite as powers of x.",
+          "latex": "f(x) = 3x^{4} + 2x^{-3} - 5x"
+        },
+        {
+          "text": "Power rule on each term.",
+          "latex": "12x^{3} - 6x^{-4} - 5"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = 12 x^{3} - 5 - \\frac{6}{x^{4}}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = 12 x^{3} - 5 - \\frac{6}{x^{2}}",
+          "f'(x) = 12 x^{3} - 5 - \\frac{6}{x^{4}}",
+          "f'(x) = - 12 x^{3} - 5 - \\frac{6}{x^{4}}",
+          "f'(x) = 12 x^{4} - 5 x - \\frac{6}{x^{3}}"
+        ],
+        "labels": [
+          "Power rule applied incorrectly to a negative exponent",
+          null,
+          "Sign error in one term",
+          "Power rule: forgot to lower the exponent"
+        ],
+        "correct": 1
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Réécrivez d'abord chaque fraction comme une puissance de x, par ex. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 12 x^{3} - 5 - \\frac{6}{x^{4}}",
+          "solution": [
+            {
+              "text": "Réécrire avec des puissances de x.",
+              "latex": "f(x) = 3x^{4} + 2x^{-3} - 5x"
+            },
+            {
+              "text": "Règle de la puissance sur chaque terme.",
+              "latex": "12x^{3} - 6x^{-4} - 5"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = 12 x^{3} - 5 - \\frac{6}{x^{4}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = 12 x^{3} - 5 - \\frac{6}{x^{2}}",
+              "f'(x) = 12 x^{3} - 5 - \\frac{6}{x^{4}}",
+              "f'(x) = - 12 x^{3} - 5 - \\frac{6}{x^{4}}",
+              "f'(x) = 12 x^{4} - 5 x - \\frac{6}{x^{3}}"
+            ],
+            "labels": [
+              "Règle de la puissance mal appliquée à un exposant négatif",
+              null,
+              "Erreur de signe dans un terme",
+              "Règle de la puissance : a oublié de diminuer l'exposant"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Riscrivi prima ogni frazione come potenza di x, ad es. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 12 x^{3} - 5 - \\frac{6}{x^{4}}",
+          "solution": [
+            {
+              "text": "Riscrivi come potenze di x.",
+              "latex": "f(x) = 3x^{4} + 2x^{-3} - 5x"
+            },
+            {
+              "text": "Regola della potenza su ogni termine.",
+              "latex": "12x^{3} - 6x^{-4} - 5"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = 12 x^{3} - 5 - \\frac{6}{x^{4}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = 12 x^{3} - 5 - \\frac{6}{x^{2}}",
+              "f'(x) = 12 x^{3} - 5 - \\frac{6}{x^{4}}",
+              "f'(x) = - 12 x^{3} - 5 - \\frac{6}{x^{4}}",
+              "f'(x) = 12 x^{4} - 5 x - \\frac{6}{x^{3}}"
+            ],
+            "labels": [
+              "Regola della potenza applicata male a un esponente negativo",
+              null,
+              "Errore di segno in un termine",
+              "Regola della potenza: non ha abbassato l'esponente"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-der-02",
+      "topic": "derivatives",
+      "difficulty": 1,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = x^{5} + 7 - \\frac{4}{x}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "-2": "4",
+          "4": "5"
+        }
+      },
+      "answer_latex": "f'(x) = 5 x^{4} + \\frac{4}{x^{2}}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Rewrite each fraction as a power of x first, e.g. 2/x^3 = 2x^(-3).",
+      "solution": [
+        {
+          "text": "Rewrite as powers of x.",
+          "latex": "f(x) = x^{5} - 4x^{-1} + 7"
+        },
+        {
+          "text": "Power rule; the constant 7 differentiates to 0.",
+          "latex": "5x^{4} + 4x^{-2}"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = 5 x^{4} + \\frac{4}{x^{2}}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = 5 x^{4} + \\frac{4}{x^{2}}",
+          "f'(x) = - 5 x^{4} + \\frac{4}{x^{2}}",
+          "f'(x) = 5 x^{5} + \\frac{4}{x}",
+          "f'(x) = 5 x^{4} + 4"
+        ],
+        "labels": [
+          null,
+          "Sign error in one term",
+          "Power rule: forgot to lower the exponent",
+          "Power rule applied incorrectly to a negative exponent"
+        ],
+        "correct": 0
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Réécrivez d'abord chaque fraction comme une puissance de x, par ex. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 5 x^{4} + \\frac{4}{x^{2}}",
+          "solution": [
+            {
+              "text": "Réécrire avec des puissances de x.",
+              "latex": "f(x) = x^{5} - 4x^{-1} + 7"
+            },
+            {
+              "text": "Règle de la puissance ; la dérivée de la constante 7 est 0.",
+              "latex": "5x^{4} + 4x^{-2}"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = 5 x^{4} + \\frac{4}{x^{2}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = 5 x^{4} + \\frac{4}{x^{2}}",
+              "f'(x) = - 5 x^{4} + \\frac{4}{x^{2}}",
+              "f'(x) = 5 x^{5} + \\frac{4}{x}",
+              "f'(x) = 5 x^{4} + 4"
+            ],
+            "labels": [
+              null,
+              "Erreur de signe dans un terme",
+              "Règle de la puissance : a oublié de diminuer l'exposant",
+              "Règle de la puissance mal appliquée à un exposant négatif"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Riscrivi prima ogni frazione come potenza di x, ad es. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 5 x^{4} + \\frac{4}{x^{2}}",
+          "solution": [
+            {
+              "text": "Riscrivi come potenze di x.",
+              "latex": "f(x) = x^{5} - 4x^{-1} + 7"
+            },
+            {
+              "text": "Regola della potenza; la costante 7 ha derivata 0.",
+              "latex": "5x^{4} + 4x^{-2}"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = 5 x^{4} + \\frac{4}{x^{2}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = 5 x^{4} + \\frac{4}{x^{2}}",
+              "f'(x) = - 5 x^{4} + \\frac{4}{x^{2}}",
+              "f'(x) = 5 x^{5} + \\frac{4}{x}",
+              "f'(x) = 5 x^{4} + 4"
+            ],
+            "labels": [
+              null,
+              "Errore di segno in un termine",
+              "Regola della potenza: non ha abbassato l'esponente",
+              "Regola della potenza applicata male a un esponente negativo"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-der-03",
+      "topic": "derivatives",
+      "difficulty": 2,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = 2 x^{3} + x - \\frac{6}{x^{2}}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "0": "1",
+          "2": "6",
+          "-3": "12"
+        }
+      },
+      "answer_latex": "f'(x) = 6 x^{2} + 1 + \\frac{12}{x^{3}}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Rewrite each fraction as a power of x first, e.g. 2/x^3 = 2x^(-3).",
+      "solution": [
+        {
+          "text": "Rewrite as powers of x.",
+          "latex": "f(x) = 2x^{3} - 6x^{-2} + x"
+        },
+        {
+          "text": "Power rule on each term.",
+          "latex": "6x^{2} + 12x^{-3} + 1"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = 6 x^{2} + 1 + \\frac{12}{x^{3}}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = 6 x^{2} + 1 + \\frac{12}{x^{3}}",
+          "f'(x) = - 6 x^{2} + 1 + \\frac{12}{x^{3}}",
+          "f'(x) = 6 x^{2} + 1 + \\frac{12}{x}",
+          "f'(x) = 6 x^{3} + x + \\frac{12}{x^{2}}"
+        ],
+        "labels": [
+          null,
+          "Sign error in one term",
+          "Power rule applied incorrectly to a negative exponent",
+          "Power rule: forgot to lower the exponent"
+        ],
+        "correct": 0
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Réécrivez d'abord chaque fraction comme une puissance de x, par ex. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 6 x^{2} + 1 + \\frac{12}{x^{3}}",
+          "solution": [
+            {
+              "text": "Réécrire avec des puissances de x.",
+              "latex": "f(x) = 2x^{3} - 6x^{-2} + x"
+            },
+            {
+              "text": "Règle de la puissance sur chaque terme.",
+              "latex": "6x^{2} + 12x^{-3} + 1"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = 6 x^{2} + 1 + \\frac{12}{x^{3}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = 6 x^{2} + 1 + \\frac{12}{x^{3}}",
+              "f'(x) = - 6 x^{2} + 1 + \\frac{12}{x^{3}}",
+              "f'(x) = 6 x^{2} + 1 + \\frac{12}{x}",
+              "f'(x) = 6 x^{3} + x + \\frac{12}{x^{2}}"
+            ],
+            "labels": [
+              null,
+              "Erreur de signe dans un terme",
+              "Règle de la puissance mal appliquée à un exposant négatif",
+              "Règle de la puissance : a oublié de diminuer l'exposant"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Riscrivi prima ogni frazione come potenza di x, ad es. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 6 x^{2} + 1 + \\frac{12}{x^{3}}",
+          "solution": [
+            {
+              "text": "Riscrivi come potenze di x.",
+              "latex": "f(x) = 2x^{3} - 6x^{-2} + x"
+            },
+            {
+              "text": "Regola della potenza su ogni termine.",
+              "latex": "6x^{2} + 12x^{-3} + 1"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = 6 x^{2} + 1 + \\frac{12}{x^{3}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = 6 x^{2} + 1 + \\frac{12}{x^{3}}",
+              "f'(x) = - 6 x^{2} + 1 + \\frac{12}{x^{3}}",
+              "f'(x) = 6 x^{2} + 1 + \\frac{12}{x}",
+              "f'(x) = 6 x^{3} + x + \\frac{12}{x^{2}}"
+            ],
+            "labels": [
+              null,
+              "Errore di segno in un termine",
+              "Regola della potenza applicata male a un esponente negativo",
+              "Regola della potenza: non ha abbassato l'esponente"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-der-04",
+      "topic": "derivatives",
+      "difficulty": 2,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = 5 x^{2} + \\frac{3}{x^{4}}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "-5": "-12",
+          "1": "10"
+        }
+      },
+      "answer_latex": "f'(x) = 10 x - \\frac{12}{x^{5}}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Rewrite each fraction as a power of x first, e.g. 2/x^3 = 2x^(-3).",
+      "solution": [
+        {
+          "text": "Rewrite as powers of x.",
+          "latex": "f(x) = 5x^{2} + 3x^{-4}"
+        },
+        {
+          "text": "Power rule on each term.",
+          "latex": "10x - 12x^{-5}"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = 10 x - \\frac{12}{x^{5}}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = 10 x - \\frac{12}{x^{5}}",
+          "f'(x) = - 10 x - \\frac{12}{x^{5}}",
+          "f'(x) = 10 x - \\frac{12}{x^{3}}",
+          "f'(x) = 10 x^{2} - \\frac{12}{x^{4}}"
+        ],
+        "labels": [
+          null,
+          "Sign error in one term",
+          "Power rule applied incorrectly to a negative exponent",
+          "Power rule: forgot to lower the exponent"
+        ],
+        "correct": 0
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Réécrivez d'abord chaque fraction comme une puissance de x, par ex. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 10 x - \\frac{12}{x^{5}}",
+          "solution": [
+            {
+              "text": "Réécrire avec des puissances de x.",
+              "latex": "f(x) = 5x^{2} + 3x^{-4}"
+            },
+            {
+              "text": "Règle de la puissance sur chaque terme.",
+              "latex": "10x - 12x^{-5}"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = 10 x - \\frac{12}{x^{5}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = 10 x - \\frac{12}{x^{5}}",
+              "f'(x) = - 10 x - \\frac{12}{x^{5}}",
+              "f'(x) = 10 x - \\frac{12}{x^{3}}",
+              "f'(x) = 10 x^{2} - \\frac{12}{x^{4}}"
+            ],
+            "labels": [
+              null,
+              "Erreur de signe dans un terme",
+              "Règle de la puissance mal appliquée à un exposant négatif",
+              "Règle de la puissance : a oublié de diminuer l'exposant"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Riscrivi prima ogni frazione come potenza di x, ad es. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 10 x - \\frac{12}{x^{5}}",
+          "solution": [
+            {
+              "text": "Riscrivi come potenze di x.",
+              "latex": "f(x) = 5x^{2} + 3x^{-4}"
+            },
+            {
+              "text": "Regola della potenza su ogni termine.",
+              "latex": "10x - 12x^{-5}"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = 10 x - \\frac{12}{x^{5}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = 10 x - \\frac{12}{x^{5}}",
+              "f'(x) = - 10 x - \\frac{12}{x^{5}}",
+              "f'(x) = 10 x - \\frac{12}{x^{3}}",
+              "f'(x) = 10 x^{2} - \\frac{12}{x^{4}}"
+            ],
+            "labels": [
+              null,
+              "Errore di segno in un termine",
+              "Regola della potenza applicata male a un esponente negativo",
+              "Regola della potenza: non ha abbassato l'esponente"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-chn-01",
+      "topic": "chain-rule",
+      "difficulty": 1,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = \\left(2 x + 3\\right)^{4}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "0": "216",
+          "3": "64",
+          "2": "288",
+          "1": "432"
+        }
+      },
+      "answer_latex": "f'(x) = 8 \\left(2 x + 3\\right)^{3}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Name the inner function u, differentiate the outside, then multiply by du/dx.",
+      "solution": [
+        {
+          "text": "Outer u^4, inner u = 2x + 3.",
+          "latex": "\\frac{d}{du}u^{4} = 4u^{3},\\quad \\frac{du}{dx} = 2"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = 8 \\left(2 x + 3\\right)^{3}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = 4 \\left(2 x + 3\\right)^{3}",
+          "f'(x) = 8 \\left(2 x + 3\\right)^{3}",
+          "f'(x) = 4 \\left(2 x + 3\\right)^{4}",
+          "f'(x) = 2 \\left(2 x + 3\\right)^{4}"
+        ],
+        "labels": [
+          "Forgot to multiply by the inner function's derivative",
+          null,
+          "Multiplied by the inner function instead of its derivative",
+          "Didn't differentiate the outer function"
+        ],
+        "correct": 1
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Nommez u la fonction intérieure, dérivez la fonction extérieure, puis multipliez par du/dx.",
+          "answer_latex": "f'(x) = 8 \\left(2 x + 3\\right)^{3}",
+          "solution": [
+            {
+              "text": "Extérieure u^4, intérieure u = 2x + 3.",
+              "latex": "\\frac{d}{du}u^{4} = 4u^{3},\\quad \\frac{du}{dx} = 2"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = 8 \\left(2 x + 3\\right)^{3}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = 4 \\left(2 x + 3\\right)^{3}",
+              "f'(x) = 8 \\left(2 x + 3\\right)^{3}",
+              "f'(x) = 4 \\left(2 x + 3\\right)^{4}",
+              "f'(x) = 2 \\left(2 x + 3\\right)^{4}"
+            ],
+            "labels": [
+              "A oublié de multiplier par la dérivée de la fonction intérieure",
+              null,
+              "A multiplié par la fonction intérieure au lieu de sa dérivée",
+              "N'a pas dérivé la fonction extérieure"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Chiama u la funzione interna, deriva la funzione esterna, poi moltiplica per du/dx.",
+          "answer_latex": "f'(x) = 8 \\left(2 x + 3\\right)^{3}",
+          "solution": [
+            {
+              "text": "Esterna u^4, interna u = 2x + 3.",
+              "latex": "\\frac{d}{du}u^{4} = 4u^{3},\\quad \\frac{du}{dx} = 2"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = 8 \\left(2 x + 3\\right)^{3}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = 4 \\left(2 x + 3\\right)^{3}",
+              "f'(x) = 8 \\left(2 x + 3\\right)^{3}",
+              "f'(x) = 4 \\left(2 x + 3\\right)^{4}",
+              "f'(x) = 2 \\left(2 x + 3\\right)^{4}"
+            ],
+            "labels": [
+              "Ha dimenticato di moltiplicare per la derivata della funzione interna",
+              null,
+              "Ha moltiplicato per la funzione interna invece che per la sua derivata",
+              "Non ha derivato la funzione esterna"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-chn-02",
+      "topic": "chain-rule",
+      "difficulty": 2,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = \\left(x^{2} + 1\\right)^{3}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "1": "6",
+          "5": "6",
+          "3": "12"
+        }
+      },
+      "answer_latex": "f'(x) = 6 x \\left(x^{2} + 1\\right)^{2}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Name the inner function u, differentiate the outside, then multiply by du/dx.",
+      "solution": [
+        {
+          "text": "Outer u^3, inner u = x^2 + 1.",
+          "latex": "\\frac{d}{du}u^{3} = 3u^{2},\\quad \\frac{du}{dx} = 2x"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = 6 x \\left(x^{2} + 1\\right)^{2}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = 6 x \\left(x^{2} + 1\\right)^{2}",
+          "f'(x) = 2 x \\left(x^{2} + 1\\right)^{3}",
+          "f'(x) = 3 \\left(x^{2} + 1\\right)^{2}",
+          "f'(x) = 3 \\left(x^{2} + 1\\right)^{3}"
+        ],
+        "labels": [
+          null,
+          "Didn't differentiate the outer function",
+          "Forgot to multiply by the inner function's derivative",
+          "Multiplied by the inner function instead of its derivative"
+        ],
+        "correct": 0
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Nommez u la fonction intérieure, dérivez la fonction extérieure, puis multipliez par du/dx.",
+          "answer_latex": "f'(x) = 6 x \\left(x^{2} + 1\\right)^{2}",
+          "solution": [
+            {
+              "text": "Extérieure u^3, intérieure u = x^2 + 1.",
+              "latex": "\\frac{d}{du}u^{3} = 3u^{2},\\quad \\frac{du}{dx} = 2x"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = 6 x \\left(x^{2} + 1\\right)^{2}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = 6 x \\left(x^{2} + 1\\right)^{2}",
+              "f'(x) = 2 x \\left(x^{2} + 1\\right)^{3}",
+              "f'(x) = 3 \\left(x^{2} + 1\\right)^{2}",
+              "f'(x) = 3 \\left(x^{2} + 1\\right)^{3}"
+            ],
+            "labels": [
+              null,
+              "N'a pas dérivé la fonction extérieure",
+              "A oublié de multiplier par la dérivée de la fonction intérieure",
+              "A multiplié par la fonction intérieure au lieu de sa dérivée"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Chiama u la funzione interna, deriva la funzione esterna, poi moltiplica per du/dx.",
+          "answer_latex": "f'(x) = 6 x \\left(x^{2} + 1\\right)^{2}",
+          "solution": [
+            {
+              "text": "Esterna u^3, interna u = x^2 + 1.",
+              "latex": "\\frac{d}{du}u^{3} = 3u^{2},\\quad \\frac{du}{dx} = 2x"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = 6 x \\left(x^{2} + 1\\right)^{2}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = 6 x \\left(x^{2} + 1\\right)^{2}",
+              "f'(x) = 2 x \\left(x^{2} + 1\\right)^{3}",
+              "f'(x) = 3 \\left(x^{2} + 1\\right)^{2}",
+              "f'(x) = 3 \\left(x^{2} + 1\\right)^{3}"
+            ],
+            "labels": [
+              null,
+              "Non ha derivato la funzione esterna",
+              "Ha dimenticato di moltiplicare per la derivata della funzione interna",
+              "Ha moltiplicato per la funzione interna invece che per la sua derivata"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-chn-03",
+      "topic": "chain-rule",
+      "difficulty": 2,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = \\left(5 - 3 x\\right)^{5}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "0": "-9375",
+          "2": "-20250",
+          "4": "-1215",
+          "3": "8100",
+          "1": "22500"
+        }
+      },
+      "answer_latex": "f'(x) = - 15 \\left(5 - 3 x\\right)^{4}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Name the inner function u, differentiate the outside, then multiply by du/dx.",
+      "solution": [
+        {
+          "text": "Outer u^5, inner u = 5 − 3x.",
+          "latex": "\\frac{d}{du}u^{5} = 5u^{4},\\quad \\frac{du}{dx} = -3"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = - 15 \\left(5 - 3 x\\right)^{4}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = - 15 \\left(5 - 3 x\\right)^{4}",
+          "f'(x) = 5 \\left(5 - 3 x\\right)^{5}",
+          "f'(x) = - 3 \\left(5 - 3 x\\right)^{5}",
+          "f'(x) = 5 \\left(5 - 3 x\\right)^{4}"
+        ],
+        "labels": [
+          null,
+          "Multiplied by the inner function instead of its derivative",
+          "Didn't differentiate the outer function",
+          "Forgot to multiply by the inner function's derivative"
+        ],
+        "correct": 0
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Nommez u la fonction intérieure, dérivez la fonction extérieure, puis multipliez par du/dx.",
+          "answer_latex": "f'(x) = - 15 \\left(5 - 3 x\\right)^{4}",
+          "solution": [
+            {
+              "text": "Extérieure u^5, intérieure u = 5 − 3x.",
+              "latex": "\\frac{d}{du}u^{5} = 5u^{4},\\quad \\frac{du}{dx} = -3"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = - 15 \\left(5 - 3 x\\right)^{4}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = - 15 \\left(5 - 3 x\\right)^{4}",
+              "f'(x) = 5 \\left(5 - 3 x\\right)^{5}",
+              "f'(x) = - 3 \\left(5 - 3 x\\right)^{5}",
+              "f'(x) = 5 \\left(5 - 3 x\\right)^{4}"
+            ],
+            "labels": [
+              null,
+              "A multiplié par la fonction intérieure au lieu de sa dérivée",
+              "N'a pas dérivé la fonction extérieure",
+              "A oublié de multiplier par la dérivée de la fonction intérieure"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Chiama u la funzione interna, deriva la funzione esterna, poi moltiplica per du/dx.",
+          "answer_latex": "f'(x) = - 15 \\left(5 - 3 x\\right)^{4}",
+          "solution": [
+            {
+              "text": "Esterna u^5, interna u = 5 − 3x.",
+              "latex": "\\frac{d}{du}u^{5} = 5u^{4},\\quad \\frac{du}{dx} = -3"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = - 15 \\left(5 - 3 x\\right)^{4}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = - 15 \\left(5 - 3 x\\right)^{4}",
+              "f'(x) = 5 \\left(5 - 3 x\\right)^{5}",
+              "f'(x) = - 3 \\left(5 - 3 x\\right)^{5}",
+              "f'(x) = 5 \\left(5 - 3 x\\right)^{4}"
+            ],
+            "labels": [
+              null,
+              "Ha moltiplicato per la funzione interna invece che per la sua derivata",
+              "Non ha derivato la funzione esterna",
+              "Ha dimenticato di moltiplicare per la derivata della funzione interna"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-chn-04",
+      "topic": "chain-rule",
+      "difficulty": 3,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = \\left(x^{3} - 2 x\\right)^{2}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "3": "-16",
+          "5": "6",
+          "1": "8"
+        }
+      },
+      "answer_latex": "f'(x) = \\left(6 x^{2} - 4\\right) \\left(x^{3} - 2 x\\right)",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Name the inner function u, differentiate the outside, then multiply by du/dx.",
+      "solution": [
+        {
+          "text": "Outer u^2, inner u = x^3 − 2x.",
+          "latex": "\\frac{d}{du}u^{2} = 2u,\\quad \\frac{du}{dx} = 3x^{2} - 2"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = \\left(6 x^{2} - 4\\right) \\left(x^{3} - 2 x\\right)"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = 2 x^{3} - 4 x",
+          "f'(x) = \\left(6 x^{2} - 4\\right) \\left(x^{3} - 2 x\\right)",
+          "f'(x) = \\left(x^{3} - 2 x\\right) \\left(2 x^{3} - 4 x\\right)",
+          "f'(x) = \\left(3 x^{2} - 2\\right) \\left(x^{3} - 2 x\\right)^{2}"
+        ],
+        "labels": [
+          "Forgot to multiply by the inner function's derivative",
+          null,
+          "Multiplied by the inner function instead of its derivative",
+          "Didn't differentiate the outer function"
+        ],
+        "correct": 1
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Nommez u la fonction intérieure, dérivez la fonction extérieure, puis multipliez par du/dx.",
+          "answer_latex": "f'(x) = \\left(6 x^{2} - 4\\right) \\left(x^{3} - 2 x\\right)",
+          "solution": [
+            {
+              "text": "Extérieure u^2, intérieure u = x^3 − 2x.",
+              "latex": "\\frac{d}{du}u^{2} = 2u,\\quad \\frac{du}{dx} = 3x^{2} - 2"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = \\left(6 x^{2} - 4\\right) \\left(x^{3} - 2 x\\right)"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = 2 x^{3} - 4 x",
+              "f'(x) = \\left(6 x^{2} - 4\\right) \\left(x^{3} - 2 x\\right)",
+              "f'(x) = \\left(x^{3} - 2 x\\right) \\left(2 x^{3} - 4 x\\right)",
+              "f'(x) = \\left(3 x^{2} - 2\\right) \\left(x^{3} - 2 x\\right)^{2}"
+            ],
+            "labels": [
+              "A oublié de multiplier par la dérivée de la fonction intérieure",
+              null,
+              "A multiplié par la fonction intérieure au lieu de sa dérivée",
+              "N'a pas dérivé la fonction extérieure"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Chiama u la funzione interna, deriva la funzione esterna, poi moltiplica per du/dx.",
+          "answer_latex": "f'(x) = \\left(6 x^{2} - 4\\right) \\left(x^{3} - 2 x\\right)",
+          "solution": [
+            {
+              "text": "Esterna u^2, interna u = x^3 − 2x.",
+              "latex": "\\frac{d}{du}u^{2} = 2u,\\quad \\frac{du}{dx} = 3x^{2} - 2"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = \\left(6 x^{2} - 4\\right) \\left(x^{3} - 2 x\\right)"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = 2 x^{3} - 4 x",
+              "f'(x) = \\left(6 x^{2} - 4\\right) \\left(x^{3} - 2 x\\right)",
+              "f'(x) = \\left(x^{3} - 2 x\\right) \\left(2 x^{3} - 4 x\\right)",
+              "f'(x) = \\left(3 x^{2} - 2\\right) \\left(x^{3} - 2 x\\right)^{2}"
+            ],
+            "labels": [
+              "Ha dimenticato di moltiplicare per la derivata della funzione interna",
+              null,
+              "Ha moltiplicato per la funzione interna invece che per la sua derivata",
+              "Non ha derivato la funzione esterna"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-crt-01",
+      "topic": "critical-points",
+      "difficulty": 1,
+      "prompt": "Find every critical point of f. List the x-values, separated by commas.",
+      "latex": "f(x) = x^{3} - 3 x^{2} - 9 x + 4",
+      "answer": {
+        "kind": "points",
+        "values": [
+          "-1",
+          "3"
+        ]
+      },
+      "answer_latex": "x = -1, x = 3",
+      "input_help": "Separate values with commas, e.g. -1, 3. Fractions like 2/3 are fine.",
+      "hint": "Solve f′(x) = 0, not f(x) = 0. Factor f′(x) first.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 3 x^{2} - 6 x - 9 = 3 \\left(x - 3\\right) \\left(x + 1\\right)"
+        },
+        {
+          "text": "Set f′(x) = 0 and solve.",
+          "latex": "x = -1, x = 3"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which list gives all the critical points of f?",
+        "options": [
+          "x = -3, x = 1",
+          "x = -1",
+          "x = -1, x = 3, x = 4",
+          "x = -1, x = 3"
+        ],
+        "labels": [
+          "Sign error when solving f′(x) = 0",
+          "Missed one of the solutions",
+          "Included a value where f′(x) ≠ 0",
+          null
+        ],
+        "correct": 3
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez tous les points critiques de f. Donnez les valeurs de x, séparées par des virgules.",
+          "input_help": "Séparez les valeurs par des virgules, par ex. -1, 3. Les fractions comme 2/3 sont acceptées.",
+          "hint": "Résolvez f′(x) = 0, et non f(x) = 0. Factorisez d'abord f′(x).",
+          "answer_latex": "x = -1, x = 3",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 3 x^{2} - 6 x - 9 = 3 \\left(x - 3\\right) \\left(x + 1\\right)"
+            },
+            {
+              "text": "Poser f′(x) = 0 et résoudre.",
+              "latex": "x = -1, x = 3"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quelle liste donne tous les points critiques de f ?",
+            "options": [
+              "x = -3, x = 1",
+              "x = -1",
+              "x = -1, x = 3, x = 4",
+              "x = -1, x = 3"
+            ],
+            "labels": [
+              "Erreur de signe en résolvant f′(x) = 0",
+              "A oublié une des solutions",
+              "A inclus une valeur où f′(x) ≠ 0",
+              null
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova tutti i punti critici di f. Elenca i valori di x, separati da virgole.",
+          "input_help": "Separa i valori con virgole, ad es. -1, 3. Le frazioni come 2/3 vanno bene.",
+          "hint": "Risolvi f′(x) = 0, non f(x) = 0. Prima fattorizza f′(x).",
+          "answer_latex": "x = -1, x = 3",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 3 x^{2} - 6 x - 9 = 3 \\left(x - 3\\right) \\left(x + 1\\right)"
+            },
+            {
+              "text": "Poni f′(x) = 0 e risolvi.",
+              "latex": "x = -1, x = 3"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale elenco contiene tutti i punti critici di f?",
+            "options": [
+              "x = -3, x = 1",
+              "x = -1",
+              "x = -1, x = 3, x = 4",
+              "x = -1, x = 3"
+            ],
+            "labels": [
+              "Errore di segno nel risolvere f′(x) = 0",
+              "Ha perso una delle soluzioni",
+              "Ha incluso un valore in cui f′(x) ≠ 0",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-crt-02",
+      "topic": "critical-points",
+      "difficulty": 2,
+      "prompt": "Find every critical point of f. List the x-values, separated by commas.",
+      "latex": "f(x) = 2 x^{3} + 3 x^{2} - 12 x",
+      "answer": {
+        "kind": "points",
+        "values": [
+          "-2",
+          "1"
+        ]
+      },
+      "answer_latex": "x = -2, x = 1",
+      "input_help": "Separate values with commas, e.g. -1, 3. Fractions like 2/3 are fine.",
+      "hint": "Solve f′(x) = 0, not f(x) = 0. Factor f′(x) first.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 6 x^{2} + 6 x - 12 = 6 \\left(x - 1\\right) \\left(x + 2\\right)"
+        },
+        {
+          "text": "Set f′(x) = 0 and solve.",
+          "latex": "x = -2, x = 1"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which list gives all the critical points of f?",
+        "options": [
+          "x = -2, x = 1",
+          "x = 0",
+          "x = -1, x = 2",
+          "x = -2"
+        ],
+        "labels": [
+          null,
+          "Solved f(x) = 0 instead of f′(x) = 0",
+          "Sign error when solving f′(x) = 0",
+          "Missed one of the solutions"
+        ],
+        "correct": 0
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez tous les points critiques de f. Donnez les valeurs de x, séparées par des virgules.",
+          "input_help": "Séparez les valeurs par des virgules, par ex. -1, 3. Les fractions comme 2/3 sont acceptées.",
+          "hint": "Résolvez f′(x) = 0, et non f(x) = 0. Factorisez d'abord f′(x).",
+          "answer_latex": "x = -2, x = 1",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 6 x^{2} + 6 x - 12 = 6 \\left(x - 1\\right) \\left(x + 2\\right)"
+            },
+            {
+              "text": "Poser f′(x) = 0 et résoudre.",
+              "latex": "x = -2, x = 1"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quelle liste donne tous les points critiques de f ?",
+            "options": [
+              "x = -2, x = 1",
+              "x = 0",
+              "x = -1, x = 2",
+              "x = -2"
+            ],
+            "labels": [
+              null,
+              "A résolu f(x) = 0 au lieu de f′(x) = 0",
+              "Erreur de signe en résolvant f′(x) = 0",
+              "A oublié une des solutions"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova tutti i punti critici di f. Elenca i valori di x, separati da virgole.",
+          "input_help": "Separa i valori con virgole, ad es. -1, 3. Le frazioni come 2/3 vanno bene.",
+          "hint": "Risolvi f′(x) = 0, non f(x) = 0. Prima fattorizza f′(x).",
+          "answer_latex": "x = -2, x = 1",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 6 x^{2} + 6 x - 12 = 6 \\left(x - 1\\right) \\left(x + 2\\right)"
+            },
+            {
+              "text": "Poni f′(x) = 0 e risolvi.",
+              "latex": "x = -2, x = 1"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale elenco contiene tutti i punti critici di f?",
+            "options": [
+              "x = -2, x = 1",
+              "x = 0",
+              "x = -1, x = 2",
+              "x = -2"
+            ],
+            "labels": [
+              null,
+              "Ha risolto f(x) = 0 invece di f′(x) = 0",
+              "Errore di segno nel risolvere f′(x) = 0",
+              "Ha perso una delle soluzioni"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-crt-03",
+      "topic": "critical-points",
+      "difficulty": 2,
+      "prompt": "Find every critical point of f. List the x-values, separated by commas.",
+      "latex": "f(x) = x^{4} - 8 x^{2}",
+      "answer": {
+        "kind": "points",
+        "values": [
+          "-2",
+          "0",
+          "2"
+        ]
+      },
+      "answer_latex": "x = -2, x = 0, x = 2",
+      "input_help": "Separate values with commas, e.g. -1, 3. Fractions like 2/3 are fine.",
+      "hint": "Solve f′(x) = 0, not f(x) = 0. Factor f′(x) first.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 4 x^{3} - 16 x = 4 x \\left(x - 2\\right) \\left(x + 2\\right)"
+        },
+        {
+          "text": "Set f′(x) = 0 and solve.",
+          "latex": "x = -2, x = 0, x = 2"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which list gives all the critical points of f?",
+        "options": [
+          "x = -2, x = 0",
+          "x = 0",
+          "x = -2, x = 0, x = 2",
+          "x = -2, x = 0, x = 2, x = 3"
+        ],
+        "labels": [
+          "Missed one of the solutions",
+          "Solved f(x) = 0 instead of f′(x) = 0",
+          null,
+          "Included a value where f′(x) ≠ 0"
+        ],
+        "correct": 2
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez tous les points critiques de f. Donnez les valeurs de x, séparées par des virgules.",
+          "input_help": "Séparez les valeurs par des virgules, par ex. -1, 3. Les fractions comme 2/3 sont acceptées.",
+          "hint": "Résolvez f′(x) = 0, et non f(x) = 0. Factorisez d'abord f′(x).",
+          "answer_latex": "x = -2, x = 0, x = 2",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 4 x^{3} - 16 x = 4 x \\left(x - 2\\right) \\left(x + 2\\right)"
+            },
+            {
+              "text": "Poser f′(x) = 0 et résoudre.",
+              "latex": "x = -2, x = 0, x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quelle liste donne tous les points critiques de f ?",
+            "options": [
+              "x = -2, x = 0",
+              "x = 0",
+              "x = -2, x = 0, x = 2",
+              "x = -2, x = 0, x = 2, x = 3"
+            ],
+            "labels": [
+              "A oublié une des solutions",
+              "A résolu f(x) = 0 au lieu de f′(x) = 0",
+              null,
+              "A inclus une valeur où f′(x) ≠ 0"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova tutti i punti critici di f. Elenca i valori di x, separati da virgole.",
+          "input_help": "Separa i valori con virgole, ad es. -1, 3. Le frazioni come 2/3 vanno bene.",
+          "hint": "Risolvi f′(x) = 0, non f(x) = 0. Prima fattorizza f′(x).",
+          "answer_latex": "x = -2, x = 0, x = 2",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 4 x^{3} - 16 x = 4 x \\left(x - 2\\right) \\left(x + 2\\right)"
+            },
+            {
+              "text": "Poni f′(x) = 0 e risolvi.",
+              "latex": "x = -2, x = 0, x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale elenco contiene tutti i punti critici di f?",
+            "options": [
+              "x = -2, x = 0",
+              "x = 0",
+              "x = -2, x = 0, x = 2",
+              "x = -2, x = 0, x = 2, x = 3"
+            ],
+            "labels": [
+              "Ha perso una delle soluzioni",
+              "Ha risolto f(x) = 0 invece di f′(x) = 0",
+              null,
+              "Ha incluso un valore in cui f′(x) ≠ 0"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-crt-04",
+      "topic": "critical-points",
+      "difficulty": 3,
+      "prompt": "Find every critical point of f. List the x-values, separated by commas.",
+      "latex": "f(x) = x^{3} - 6 x^{2} + 12 x",
+      "answer": {
+        "kind": "points",
+        "values": [
+          "2"
+        ]
+      },
+      "answer_latex": "x = 2",
+      "input_help": "Separate values with commas, e.g. -1, 3. Fractions like 2/3 are fine.",
+      "hint": "Factor f′(x) completely. A repeated factor gives one critical point, not two.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 3 x^{2} - 12 x + 12 = 3 \\left(x - 2\\right)^{2}"
+        },
+        {
+          "text": "Set f′(x) = 0 and solve.",
+          "latex": "x = 2"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which list gives all the critical points of f?",
+        "options": [
+          "x = 2, x = 3",
+          "x = 2",
+          "x = -2",
+          "x = 0"
+        ],
+        "labels": [
+          "Included a value where f′(x) ≠ 0",
+          null,
+          "Sign error when solving f′(x) = 0",
+          "Solved f(x) = 0 instead of f′(x) = 0"
+        ],
+        "correct": 1
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez tous les points critiques de f. Donnez les valeurs de x, séparées par des virgules.",
+          "input_help": "Séparez les valeurs par des virgules, par ex. -1, 3. Les fractions comme 2/3 sont acceptées.",
+          "hint": "Factorisez complètement f′(x). Un facteur répété donne un seul point critique, pas deux.",
+          "answer_latex": "x = 2",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 3 x^{2} - 12 x + 12 = 3 \\left(x - 2\\right)^{2}"
+            },
+            {
+              "text": "Poser f′(x) = 0 et résoudre.",
+              "latex": "x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quelle liste donne tous les points critiques de f ?",
+            "options": [
+              "x = 2, x = 3",
+              "x = 2",
+              "x = -2",
+              "x = 0"
+            ],
+            "labels": [
+              "A inclus une valeur où f′(x) ≠ 0",
+              null,
+              "Erreur de signe en résolvant f′(x) = 0",
+              "A résolu f(x) = 0 au lieu de f′(x) = 0"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova tutti i punti critici di f. Elenca i valori di x, separati da virgole.",
+          "input_help": "Separa i valori con virgole, ad es. -1, 3. Le frazioni come 2/3 vanno bene.",
+          "hint": "Fattorizza completamente f′(x). Un fattore ripetuto dà un solo punto critico, non due.",
+          "answer_latex": "x = 2",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 3 x^{2} - 12 x + 12 = 3 \\left(x - 2\\right)^{2}"
+            },
+            {
+              "text": "Poni f′(x) = 0 e risolvi.",
+              "latex": "x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale elenco contiene tutti i punti critici di f?",
+            "options": [
+              "x = 2, x = 3",
+              "x = 2",
+              "x = -2",
+              "x = 0"
+            ],
+            "labels": [
+              "Ha incluso un valore in cui f′(x) ≠ 0",
+              null,
+              "Errore di segno nel risolvere f′(x) = 0",
+              "Ha risolto f(x) = 0 invece di f′(x) = 0"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-int-01",
+      "topic": "closed-interval",
+      "difficulty": 1,
+      "prompt": "Find the absolute maximum of f on the interval, and every x where it happens.",
+      "latex": "f(x) = x^{3} - 3 x,\\quad x \\in [0,\\,3]",
+      "answer": {
+        "kind": "extremum",
+        "extremum": "max",
+        "value": "18",
+        "at": [
+          "3"
+        ]
+      },
+      "answer_latex": "\\text{absolute maximum } = 18 \\text{ at } x = 3",
+      "input_help": "Enter the value, then the x-value(s). Separate several x-values with commas.",
+      "hint": "Candidates are the critical points inside the interval and both endpoints. Evaluate f at all of them.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 3 x^{2} - 3 = 3 \\left(x - 1\\right) \\left(x + 1\\right)"
+        },
+        {
+          "text": "Critical points inside [0, 3].",
+          "latex": "x = 1"
+        },
+        {
+          "text": "Evaluate at the critical points and both endpoints.",
+          "latex": "f(0) = 0,\\; f(1) = -2,\\; f(3) = 18"
+        },
+        {
+          "text": "Compare.",
+          "latex": "\\text{absolute maximum } = 18 \\text{ at } x = 3"
+        }
+      ],
+      "mcq": {
+        "prompt": "What is the absolute maximum of f on the interval, and where?",
+        "options": [
+          "\\text{absolute maximum } = 19 \\text{ at } x = 3",
+          "\\text{absolute maximum } = 18 \\text{ at } x = 0",
+          "\\text{absolute maximum } = 18 \\text{ at } x = 3",
+          "\\text{absolute maximum } = -2 \\text{ at } x = 1"
+        ],
+        "labels": [
+          "Arithmetic error when evaluating f",
+          "Right value, wrong location",
+          null,
+          "Forgot to evaluate the interval endpoints"
+        ],
+        "correct": 2
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez le maximum absolu de f sur l'intervalle, et toutes les valeurs de x où il est atteint.",
+          "input_help": "Saisissez la valeur, puis la ou les valeurs de x. Séparez plusieurs valeurs de x par des virgules.",
+          "hint": "Les candidats sont les points critiques dans l'intervalle et les deux bornes. Évaluez f en chacun d'eux.",
+          "answer_latex": "\\text{maximum absolu } = 18 \\text{ en } x = 3",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 3 x^{2} - 3 = 3 \\left(x - 1\\right) \\left(x + 1\\right)"
+            },
+            {
+              "text": "Points critiques dans [0, 3].",
+              "latex": "x = 1"
+            },
+            {
+              "text": "Évaluer aux points critiques et aux deux bornes.",
+              "latex": "f(0) = 0,\\; f(1) = -2,\\; f(3) = 18"
+            },
+            {
+              "text": "Comparer.",
+              "latex": "\\text{maximum absolu } = 18 \\text{ en } x = 3"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quel est le maximum absolu de f sur l'intervalle, et où est-il atteint ?",
+            "options": [
+              "\\text{maximum absolu } = 19 \\text{ en } x = 3",
+              "\\text{maximum absolu } = 18 \\text{ en } x = 0",
+              "\\text{maximum absolu } = 18 \\text{ en } x = 3",
+              "\\text{maximum absolu } = -2 \\text{ en } x = 1"
+            ],
+            "labels": [
+              "Erreur de calcul en évaluant f",
+              "Bonne valeur, mauvais point",
+              null,
+              "A oublié d'évaluer les bornes de l'intervalle"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova il massimo assoluto di f sull'intervallo e tutti i valori di x in cui si raggiunge.",
+          "input_help": "Inserisci il valore, poi il valore o i valori di x. Separa più valori di x con virgole.",
+          "hint": "I candidati sono i punti critici interni all'intervallo e i due estremi. Valuta f in ciascuno.",
+          "answer_latex": "\\text{massimo assoluto } = 18 \\text{ in } x = 3",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 3 x^{2} - 3 = 3 \\left(x - 1\\right) \\left(x + 1\\right)"
+            },
+            {
+              "text": "Punti critici interni a [0, 3].",
+              "latex": "x = 1"
+            },
+            {
+              "text": "Valuta nei punti critici e nei due estremi.",
+              "latex": "f(0) = 0,\\; f(1) = -2,\\; f(3) = 18"
+            },
+            {
+              "text": "Confronta.",
+              "latex": "\\text{massimo assoluto } = 18 \\text{ in } x = 3"
+            }
+          ],
+          "mcq": {
+            "prompt": "Qual è il massimo assoluto di f sull'intervallo, e dove si raggiunge?",
+            "options": [
+              "\\text{massimo assoluto } = 19 \\text{ in } x = 3",
+              "\\text{massimo assoluto } = 18 \\text{ in } x = 0",
+              "\\text{massimo assoluto } = 18 \\text{ in } x = 3",
+              "\\text{massimo assoluto } = -2 \\text{ in } x = 1"
+            ],
+            "labels": [
+              "Errore di calcolo nel valutare f",
+              "Valore giusto, punto sbagliato",
+              null,
+              "Ha dimenticato di valutare gli estremi dell'intervallo"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-int-02",
+      "topic": "closed-interval",
+      "difficulty": 2,
+      "prompt": "Find the absolute minimum of f on the interval, and every x where it happens.",
+      "latex": "f(x) = x^{3} - 3 x^{2},\\quad x \\in [1,\\,4]",
+      "answer": {
+        "kind": "extremum",
+        "extremum": "min",
+        "value": "-4",
+        "at": [
+          "2"
+        ]
+      },
+      "answer_latex": "\\text{absolute minimum } = -4 \\text{ at } x = 2",
+      "input_help": "Enter the value, then the x-value(s). Separate several x-values with commas.",
+      "hint": "Candidates are the critical points inside the interval and both endpoints. Evaluate f at all of them.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 3 x^{2} - 6 x = 3 x \\left(x - 2\\right)"
+        },
+        {
+          "text": "Critical points inside [1, 4].",
+          "latex": "x = 2"
+        },
+        {
+          "text": "Evaluate at the critical points and both endpoints.",
+          "latex": "f(1) = -2,\\; f(2) = -4,\\; f(4) = 16"
+        },
+        {
+          "text": "Compare.",
+          "latex": "\\text{absolute minimum } = -4 \\text{ at } x = 2"
+        }
+      ],
+      "mcq": {
+        "prompt": "What is the absolute minimum of f on the interval, and where?",
+        "options": [
+          "\\text{absolute minimum } = -4 \\text{ at } x = 1",
+          "\\text{absolute minimum } = 16 \\text{ at } x = 4",
+          "\\text{absolute minimum } = -4 \\text{ at } x = 2",
+          "\\text{absolute minimum } = -5 \\text{ at } x = 2"
+        ],
+        "labels": [
+          "Right value, wrong location",
+          "Found the maximum instead",
+          null,
+          "Arithmetic error when evaluating f"
+        ],
+        "correct": 2
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez le minimum absolu de f sur l'intervalle, et toutes les valeurs de x où il est atteint.",
+          "input_help": "Saisissez la valeur, puis la ou les valeurs de x. Séparez plusieurs valeurs de x par des virgules.",
+          "hint": "Les candidats sont les points critiques dans l'intervalle et les deux bornes. Évaluez f en chacun d'eux.",
+          "answer_latex": "\\text{minimum absolu } = -4 \\text{ en } x = 2",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 3 x^{2} - 6 x = 3 x \\left(x - 2\\right)"
+            },
+            {
+              "text": "Points critiques dans [1, 4].",
+              "latex": "x = 2"
+            },
+            {
+              "text": "Évaluer aux points critiques et aux deux bornes.",
+              "latex": "f(1) = -2,\\; f(2) = -4,\\; f(4) = 16"
+            },
+            {
+              "text": "Comparer.",
+              "latex": "\\text{minimum absolu } = -4 \\text{ en } x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quel est le minimum absolu de f sur l'intervalle, et où est-il atteint ?",
+            "options": [
+              "\\text{minimum absolu } = -4 \\text{ en } x = 1",
+              "\\text{minimum absolu } = 16 \\text{ en } x = 4",
+              "\\text{minimum absolu } = -4 \\text{ en } x = 2",
+              "\\text{minimum absolu } = -5 \\text{ en } x = 2"
+            ],
+            "labels": [
+              "Bonne valeur, mauvais point",
+              "A trouvé le maximum à la place",
+              null,
+              "Erreur de calcul en évaluant f"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova il minimo assoluto di f sull'intervallo e tutti i valori di x in cui si raggiunge.",
+          "input_help": "Inserisci il valore, poi il valore o i valori di x. Separa più valori di x con virgole.",
+          "hint": "I candidati sono i punti critici interni all'intervallo e i due estremi. Valuta f in ciascuno.",
+          "answer_latex": "\\text{minimo assoluto } = -4 \\text{ in } x = 2",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 3 x^{2} - 6 x = 3 x \\left(x - 2\\right)"
+            },
+            {
+              "text": "Punti critici interni a [1, 4].",
+              "latex": "x = 2"
+            },
+            {
+              "text": "Valuta nei punti critici e nei due estremi.",
+              "latex": "f(1) = -2,\\; f(2) = -4,\\; f(4) = 16"
+            },
+            {
+              "text": "Confronta.",
+              "latex": "\\text{minimo assoluto } = -4 \\text{ in } x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Qual è il minimo assoluto di f sull'intervallo, e dove si raggiunge?",
+            "options": [
+              "\\text{minimo assoluto } = -4 \\text{ in } x = 1",
+              "\\text{minimo assoluto } = 16 \\text{ in } x = 4",
+              "\\text{minimo assoluto } = -4 \\text{ in } x = 2",
+              "\\text{minimo assoluto } = -5 \\text{ in } x = 2"
+            ],
+            "labels": [
+              "Valore giusto, punto sbagliato",
+              "Ha trovato invece il massimo",
+              null,
+              "Errore di calcolo nel valutare f"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-int-03",
+      "topic": "closed-interval",
+      "difficulty": 3,
+      "prompt": "Find the absolute maximum of f on the interval, and every x where it happens.",
+      "latex": "f(x) = - x^{3} + 3 x^{2} + 1,\\quad x \\in [-1,\\,3]",
+      "answer": {
+        "kind": "extremum",
+        "extremum": "max",
+        "value": "5",
+        "at": [
+          "-1",
+          "2"
+        ]
+      },
+      "answer_latex": "\\text{absolute maximum } = 5 \\text{ at } x = -1, x = 2",
+      "input_help": "Enter the value, then the x-value(s). Separate several x-values with commas.",
+      "hint": "Candidates are the critical points inside the interval and both endpoints. Evaluate f at all of them. Two candidates can tie.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = - 3 x^{2} + 6 x = - 3 x \\left(x - 2\\right)"
+        },
+        {
+          "text": "Critical points inside [-1, 3].",
+          "latex": "x = 0, x = 2"
+        },
+        {
+          "text": "Evaluate at the critical points and both endpoints.",
+          "latex": "f(-1) = 5,\\; f(0) = 1,\\; f(2) = 5,\\; f(3) = 1"
+        },
+        {
+          "text": "Compare.",
+          "latex": "\\text{absolute maximum } = 5 \\text{ at } x = -1, x = 2"
+        }
+      ],
+      "mcq": {
+        "prompt": "What is the absolute maximum of f on the interval, and where?",
+        "options": [
+          "\\text{absolute maximum } = 5 \\text{ at } x = -1, x = 2",
+          "\\text{absolute maximum } = 1 \\text{ at } x = 0, x = 3",
+          "\\text{absolute maximum } = 5 \\text{ at } x = 3",
+          "\\text{absolute maximum } = 5 \\text{ at } x = 2"
+        ],
+        "labels": [
+          null,
+          "Found the minimum instead",
+          "Right value, wrong location",
+          "Forgot to evaluate the interval endpoints"
+        ],
+        "correct": 0
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez le maximum absolu de f sur l'intervalle, et toutes les valeurs de x où il est atteint.",
+          "input_help": "Saisissez la valeur, puis la ou les valeurs de x. Séparez plusieurs valeurs de x par des virgules.",
+          "hint": "Les candidats sont les points critiques dans l'intervalle et les deux bornes. Évaluez f en chacun d'eux. Deux candidats peuvent être à égalité.",
+          "answer_latex": "\\text{maximum absolu } = 5 \\text{ en } x = -1, x = 2",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = - 3 x^{2} + 6 x = - 3 x \\left(x - 2\\right)"
+            },
+            {
+              "text": "Points critiques dans [-1, 3].",
+              "latex": "x = 0, x = 2"
+            },
+            {
+              "text": "Évaluer aux points critiques et aux deux bornes.",
+              "latex": "f(-1) = 5,\\; f(0) = 1,\\; f(2) = 5,\\; f(3) = 1"
+            },
+            {
+              "text": "Comparer.",
+              "latex": "\\text{maximum absolu } = 5 \\text{ en } x = -1, x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quel est le maximum absolu de f sur l'intervalle, et où est-il atteint ?",
+            "options": [
+              "\\text{maximum absolu } = 5 \\text{ en } x = -1, x = 2",
+              "\\text{maximum absolu } = 1 \\text{ en } x = 0, x = 3",
+              "\\text{maximum absolu } = 5 \\text{ en } x = 3",
+              "\\text{maximum absolu } = 5 \\text{ en } x = 2"
+            ],
+            "labels": [
+              null,
+              "A trouvé le minimum à la place",
+              "Bonne valeur, mauvais point",
+              "A oublié d'évaluer les bornes de l'intervalle"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova il massimo assoluto di f sull'intervallo e tutti i valori di x in cui si raggiunge.",
+          "input_help": "Inserisci il valore, poi il valore o i valori di x. Separa più valori di x con virgole.",
+          "hint": "I candidati sono i punti critici interni all'intervallo e i due estremi. Valuta f in ciascuno. Due candidati possono essere a pari merito.",
+          "answer_latex": "\\text{massimo assoluto } = 5 \\text{ in } x = -1, x = 2",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = - 3 x^{2} + 6 x = - 3 x \\left(x - 2\\right)"
+            },
+            {
+              "text": "Punti critici interni a [-1, 3].",
+              "latex": "x = 0, x = 2"
+            },
+            {
+              "text": "Valuta nei punti critici e nei due estremi.",
+              "latex": "f(-1) = 5,\\; f(0) = 1,\\; f(2) = 5,\\; f(3) = 1"
+            },
+            {
+              "text": "Confronta.",
+              "latex": "\\text{massimo assoluto } = 5 \\text{ in } x = -1, x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Qual è il massimo assoluto di f sull'intervallo, e dove si raggiunge?",
+            "options": [
+              "\\text{massimo assoluto } = 5 \\text{ in } x = -1, x = 2",
+              "\\text{massimo assoluto } = 1 \\text{ in } x = 0, x = 3",
+              "\\text{massimo assoluto } = 5 \\text{ in } x = 3",
+              "\\text{massimo assoluto } = 5 \\text{ in } x = 2"
+            ],
+            "labels": [
+              null,
+              "Ha trovato invece il minimo",
+              "Valore giusto, punto sbagliato",
+              "Ha dimenticato di valutare gli estremi dell'intervallo"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-int-04",
+      "topic": "closed-interval",
+      "difficulty": 2,
+      "prompt": "Find the absolute minimum of f on the interval, and every x where it happens.",
+      "latex": "f(x) = 2 x^{3} - 9 x^{2} + 12 x,\\quad x \\in [0,\\,3]",
+      "answer": {
+        "kind": "extremum",
+        "extremum": "min",
+        "value": "0",
+        "at": [
+          "0"
+        ]
+      },
+      "answer_latex": "\\text{absolute minimum } = 0 \\text{ at } x = 0",
+      "input_help": "Enter the value, then the x-value(s). Separate several x-values with commas.",
+      "hint": "Candidates are the critical points inside the interval and both endpoints. Evaluate f at all of them.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 6 x^{2} - 18 x + 12 = 6 \\left(x - 2\\right) \\left(x - 1\\right)"
+        },
+        {
+          "text": "Critical points inside [0, 3].",
+          "latex": "x = 1, x = 2"
+        },
+        {
+          "text": "Evaluate at the critical points and both endpoints.",
+          "latex": "f(0) = 0,\\; f(1) = 5,\\; f(2) = 4,\\; f(3) = 9"
+        },
+        {
+          "text": "Compare.",
+          "latex": "\\text{absolute minimum } = 0 \\text{ at } x = 0"
+        }
+      ],
+      "mcq": {
+        "prompt": "What is the absolute minimum of f on the interval, and where?",
+        "options": [
+          "\\text{absolute minimum } = 4 \\text{ at } x = 2",
+          "\\text{absolute minimum } = 0 \\text{ at } x = 3",
+          "\\text{absolute minimum } = 9 \\text{ at } x = 3",
+          "\\text{absolute minimum } = 0 \\text{ at } x = 0"
+        ],
+        "labels": [
+          "Forgot to evaluate the interval endpoints",
+          "Right value, wrong location",
+          "Found the maximum instead",
+          null
+        ],
+        "correct": 3
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez le minimum absolu de f sur l'intervalle, et toutes les valeurs de x où il est atteint.",
+          "input_help": "Saisissez la valeur, puis la ou les valeurs de x. Séparez plusieurs valeurs de x par des virgules.",
+          "hint": "Les candidats sont les points critiques dans l'intervalle et les deux bornes. Évaluez f en chacun d'eux.",
+          "answer_latex": "\\text{minimum absolu } = 0 \\text{ en } x = 0",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 6 x^{2} - 18 x + 12 = 6 \\left(x - 2\\right) \\left(x - 1\\right)"
+            },
+            {
+              "text": "Points critiques dans [0, 3].",
+              "latex": "x = 1, x = 2"
+            },
+            {
+              "text": "Évaluer aux points critiques et aux deux bornes.",
+              "latex": "f(0) = 0,\\; f(1) = 5,\\; f(2) = 4,\\; f(3) = 9"
+            },
+            {
+              "text": "Comparer.",
+              "latex": "\\text{minimum absolu } = 0 \\text{ en } x = 0"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quel est le minimum absolu de f sur l'intervalle, et où est-il atteint ?",
+            "options": [
+              "\\text{minimum absolu } = 4 \\text{ en } x = 2",
+              "\\text{minimum absolu } = 0 \\text{ en } x = 3",
+              "\\text{minimum absolu } = 9 \\text{ en } x = 3",
+              "\\text{minimum absolu } = 0 \\text{ en } x = 0"
+            ],
+            "labels": [
+              "A oublié d'évaluer les bornes de l'intervalle",
+              "Bonne valeur, mauvais point",
+              "A trouvé le maximum à la place",
+              null
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova il minimo assoluto di f sull'intervallo e tutti i valori di x in cui si raggiunge.",
+          "input_help": "Inserisci il valore, poi il valore o i valori di x. Separa più valori di x con virgole.",
+          "hint": "I candidati sono i punti critici interni all'intervallo e i due estremi. Valuta f in ciascuno.",
+          "answer_latex": "\\text{minimo assoluto } = 0 \\text{ in } x = 0",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 6 x^{2} - 18 x + 12 = 6 \\left(x - 2\\right) \\left(x - 1\\right)"
+            },
+            {
+              "text": "Punti critici interni a [0, 3].",
+              "latex": "x = 1, x = 2"
+            },
+            {
+              "text": "Valuta nei punti critici e nei due estremi.",
+              "latex": "f(0) = 0,\\; f(1) = 5,\\; f(2) = 4,\\; f(3) = 9"
+            },
+            {
+              "text": "Confronta.",
+              "latex": "\\text{minimo assoluto } = 0 \\text{ in } x = 0"
+            }
+          ],
+          "mcq": {
+            "prompt": "Qual è il minimo assoluto di f sull'intervallo, e dove si raggiunge?",
+            "options": [
+              "\\text{minimo assoluto } = 4 \\text{ in } x = 2",
+              "\\text{minimo assoluto } = 0 \\text{ in } x = 3",
+              "\\text{minimo assoluto } = 9 \\text{ in } x = 3",
+              "\\text{minimo assoluto } = 0 \\text{ in } x = 0"
+            ],
+            "labels": [
+              "Ha dimenticato di valutare gli estremi dell'intervallo",
+              "Valore giusto, punto sbagliato",
+              "Ha trovato invece il massimo",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-int-05",
+      "topic": "closed-interval",
+      "difficulty": 2,
+      "prompt": "Find the absolute maximum of f on the interval, and every x where it happens.",
+      "latex": "f(x) = x^{4} - 2 x^{2},\\quad x \\in [-2,\\,1]",
+      "answer": {
+        "kind": "extremum",
+        "extremum": "max",
+        "value": "8",
+        "at": [
+          "-2"
+        ]
+      },
+      "answer_latex": "\\text{absolute maximum } = 8 \\text{ at } x = -2",
+      "input_help": "Enter the value, then the x-value(s). Separate several x-values with commas.",
+      "hint": "Candidates are the critical points inside the interval and both endpoints. Evaluate f at all of them.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 4 x^{3} - 4 x = 4 x \\left(x - 1\\right) \\left(x + 1\\right)"
+        },
+        {
+          "text": "Critical points inside [-2, 1].",
+          "latex": "x = -1, x = 0, x = 1"
+        },
+        {
+          "text": "Evaluate at the critical points and both endpoints.",
+          "latex": "f(-2) = 8,\\; f(-1) = -1,\\; f(0) = 0,\\; f(1) = -1"
+        },
+        {
+          "text": "Compare.",
+          "latex": "\\text{absolute maximum } = 8 \\text{ at } x = -2"
+        }
+      ],
+      "mcq": {
+        "prompt": "What is the absolute maximum of f on the interval, and where?",
+        "options": [
+          "\\text{absolute maximum } = -1 \\text{ at } x = -1, x = 1, x = 1",
+          "\\text{absolute maximum } = 8 \\text{ at } x = -2",
+          "\\text{absolute maximum } = 0 \\text{ at } x = 0",
+          "\\text{absolute maximum } = 8 \\text{ at } x = 1"
+        ],
+        "labels": [
+          "Found the minimum instead",
+          null,
+          "Forgot to evaluate the interval endpoints",
+          "Right value, wrong location"
+        ],
+        "correct": 1
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez le maximum absolu de f sur l'intervalle, et toutes les valeurs de x où il est atteint.",
+          "input_help": "Saisissez la valeur, puis la ou les valeurs de x. Séparez plusieurs valeurs de x par des virgules.",
+          "hint": "Les candidats sont les points critiques dans l'intervalle et les deux bornes. Évaluez f en chacun d'eux.",
+          "answer_latex": "\\text{maximum absolu } = 8 \\text{ en } x = -2",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 4 x^{3} - 4 x = 4 x \\left(x - 1\\right) \\left(x + 1\\right)"
+            },
+            {
+              "text": "Points critiques dans [-2, 1].",
+              "latex": "x = -1, x = 0, x = 1"
+            },
+            {
+              "text": "Évaluer aux points critiques et aux deux bornes.",
+              "latex": "f(-2) = 8,\\; f(-1) = -1,\\; f(0) = 0,\\; f(1) = -1"
+            },
+            {
+              "text": "Comparer.",
+              "latex": "\\text{maximum absolu } = 8 \\text{ en } x = -2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quel est le maximum absolu de f sur l'intervalle, et où est-il atteint ?",
+            "options": [
+              "\\text{maximum absolu } = -1 \\text{ en } x = -1, x = 1, x = 1",
+              "\\text{maximum absolu } = 8 \\text{ en } x = -2",
+              "\\text{maximum absolu } = 0 \\text{ en } x = 0",
+              "\\text{maximum absolu } = 8 \\text{ en } x = 1"
+            ],
+            "labels": [
+              "A trouvé le minimum à la place",
+              null,
+              "A oublié d'évaluer les bornes de l'intervalle",
+              "Bonne valeur, mauvais point"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova il massimo assoluto di f sull'intervallo e tutti i valori di x in cui si raggiunge.",
+          "input_help": "Inserisci il valore, poi il valore o i valori di x. Separa più valori di x con virgole.",
+          "hint": "I candidati sono i punti critici interni all'intervallo e i due estremi. Valuta f in ciascuno.",
+          "answer_latex": "\\text{massimo assoluto } = 8 \\text{ in } x = -2",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 4 x^{3} - 4 x = 4 x \\left(x - 1\\right) \\left(x + 1\\right)"
+            },
+            {
+              "text": "Punti critici interni a [-2, 1].",
+              "latex": "x = -1, x = 0, x = 1"
+            },
+            {
+              "text": "Valuta nei punti critici e nei due estremi.",
+              "latex": "f(-2) = 8,\\; f(-1) = -1,\\; f(0) = 0,\\; f(1) = -1"
+            },
+            {
+              "text": "Confronta.",
+              "latex": "\\text{massimo assoluto } = 8 \\text{ in } x = -2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Qual è il massimo assoluto di f sull'intervallo, e dove si raggiunge?",
+            "options": [
+              "\\text{massimo assoluto } = -1 \\text{ in } x = -1, x = 1, x = 1",
+              "\\text{massimo assoluto } = 8 \\text{ in } x = -2",
+              "\\text{massimo assoluto } = 0 \\text{ in } x = 0",
+              "\\text{massimo assoluto } = 8 \\text{ in } x = 1"
+            ],
+            "labels": [
+              "Ha trovato invece il minimo",
+              null,
+              "Ha dimenticato di valutare gli estremi dell'intervallo",
+              "Valore giusto, punto sbagliato"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-der-05",
+      "topic": "derivatives",
+      "difficulty": 2,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = 4 x^{3} + 3 - \\frac{2}{x^{5}}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "-6": "10",
+          "2": "12"
+        }
+      },
+      "answer_latex": "f'(x) = 12 x^{2} + \\frac{10}{x^{6}}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Rewrite each fraction as a power of x first, e.g. 2/x^3 = 2x^(-3).",
+      "solution": [
+        {
+          "text": "Rewrite as powers of x.",
+          "latex": "f(x) = 4x^{3} - 2x^{-5} + 3"
+        },
+        {
+          "text": "Power rule; the constant differentiates to 0.",
+          "latex": "12x^{2} + 10x^{-6}"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = 12 x^{2} + \\frac{10}{x^{6}}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = - 12 x^{2} + \\frac{10}{x^{6}}",
+          "f'(x) = 12 x^{2} + \\frac{10}{x^{4}}",
+          "f'(x) = 12 x^{2} + \\frac{10}{x^{6}}",
+          "f'(x) = 12 x^{3} + \\frac{10}{x^{5}}"
+        ],
+        "labels": [
+          "Sign error in one term",
+          "Power rule applied incorrectly to a negative exponent",
+          null,
+          "Power rule: forgot to lower the exponent"
+        ],
+        "correct": 2
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Réécrivez d'abord chaque fraction comme une puissance de x, par ex. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 12 x^{2} + \\frac{10}{x^{6}}",
+          "solution": [
+            {
+              "text": "Réécrire avec des puissances de x.",
+              "latex": "f(x) = 4x^{3} - 2x^{-5} + 3"
+            },
+            {
+              "text": "Règle de la puissance ; la dérivée de la constante est 0.",
+              "latex": "12x^{2} + 10x^{-6}"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = 12 x^{2} + \\frac{10}{x^{6}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = - 12 x^{2} + \\frac{10}{x^{6}}",
+              "f'(x) = 12 x^{2} + \\frac{10}{x^{4}}",
+              "f'(x) = 12 x^{2} + \\frac{10}{x^{6}}",
+              "f'(x) = 12 x^{3} + \\frac{10}{x^{5}}"
+            ],
+            "labels": [
+              "Erreur de signe dans un terme",
+              "Règle de la puissance mal appliquée à un exposant négatif",
+              null,
+              "Règle de la puissance : a oublié de diminuer l'exposant"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Riscrivi prima ogni frazione come potenza di x, ad es. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 12 x^{2} + \\frac{10}{x^{6}}",
+          "solution": [
+            {
+              "text": "Riscrivi come potenze di x.",
+              "latex": "f(x) = 4x^{3} - 2x^{-5} + 3"
+            },
+            {
+              "text": "Regola della potenza; la costante ha derivata 0.",
+              "latex": "12x^{2} + 10x^{-6}"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = 12 x^{2} + \\frac{10}{x^{6}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = - 12 x^{2} + \\frac{10}{x^{6}}",
+              "f'(x) = 12 x^{2} + \\frac{10}{x^{4}}",
+              "f'(x) = 12 x^{2} + \\frac{10}{x^{6}}",
+              "f'(x) = 12 x^{3} + \\frac{10}{x^{5}}"
+            ],
+            "labels": [
+              "Errore di segno in un termine",
+              "Regola della potenza applicata male a un esponente negativo",
+              null,
+              "Regola della potenza: non ha abbassato l'esponente"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-der-06",
+      "topic": "derivatives",
+      "difficulty": 2,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = \\frac{x^{6}}{3} - \\frac{5}{x^{2}}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "5": "2",
+          "-3": "10"
+        }
+      },
+      "answer_latex": "f'(x) = 2 x^{5} + \\frac{10}{x^{3}}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Rewrite each fraction as a power of x first, e.g. 2/x^3 = 2x^(-3).",
+      "solution": [
+        {
+          "text": "Rewrite as powers of x.",
+          "latex": "f(x) = \\tfrac{1}{3}x^{6} - 5x^{-2}"
+        },
+        {
+          "text": "Power rule on each term.",
+          "latex": "2x^{5} + 10x^{-3}"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = 2 x^{5} + \\frac{10}{x^{3}}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = 2 x^{5} + \\frac{10}{x}",
+          "f'(x) = - 2 x^{5} + \\frac{10}{x^{3}}",
+          "f'(x) = 2 x^{5} + \\frac{10}{x^{3}}",
+          "f'(x) = 2 x^{6} + \\frac{10}{x^{2}}"
+        ],
+        "labels": [
+          "Power rule applied incorrectly to a negative exponent",
+          "Sign error in one term",
+          null,
+          "Power rule: forgot to lower the exponent"
+        ],
+        "correct": 2
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Réécrivez d'abord chaque fraction comme une puissance de x, par ex. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 2 x^{5} + \\frac{10}{x^{3}}",
+          "solution": [
+            {
+              "text": "Réécrire avec des puissances de x.",
+              "latex": "f(x) = \\tfrac{1}{3}x^{6} - 5x^{-2}"
+            },
+            {
+              "text": "Règle de la puissance sur chaque terme.",
+              "latex": "2x^{5} + 10x^{-3}"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = 2 x^{5} + \\frac{10}{x^{3}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = 2 x^{5} + \\frac{10}{x}",
+              "f'(x) = - 2 x^{5} + \\frac{10}{x^{3}}",
+              "f'(x) = 2 x^{5} + \\frac{10}{x^{3}}",
+              "f'(x) = 2 x^{6} + \\frac{10}{x^{2}}"
+            ],
+            "labels": [
+              "Règle de la puissance mal appliquée à un exposant négatif",
+              "Erreur de signe dans un terme",
+              null,
+              "Règle de la puissance : a oublié de diminuer l'exposant"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Riscrivi prima ogni frazione come potenza di x, ad es. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 2 x^{5} + \\frac{10}{x^{3}}",
+          "solution": [
+            {
+              "text": "Riscrivi come potenze di x.",
+              "latex": "f(x) = \\tfrac{1}{3}x^{6} - 5x^{-2}"
+            },
+            {
+              "text": "Regola della potenza su ogni termine.",
+              "latex": "2x^{5} + 10x^{-3}"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = 2 x^{5} + \\frac{10}{x^{3}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = 2 x^{5} + \\frac{10}{x}",
+              "f'(x) = - 2 x^{5} + \\frac{10}{x^{3}}",
+              "f'(x) = 2 x^{5} + \\frac{10}{x^{3}}",
+              "f'(x) = 2 x^{6} + \\frac{10}{x^{2}}"
+            ],
+            "labels": [
+              "Regola della potenza applicata male a un esponente negativo",
+              "Errore di segno in un termine",
+              null,
+              "Regola della potenza: non ha abbassato l'esponente"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-der-07",
+      "topic": "derivatives",
+      "difficulty": 1,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = 2 x^{4} + 7 x - \\frac{3}{x^{3}}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "0": "7",
+          "3": "8",
+          "-4": "9"
+        }
+      },
+      "answer_latex": "f'(x) = 8 x^{3} + 7 + \\frac{9}{x^{4}}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Rewrite each fraction as a power of x first, e.g. 2/x^3 = 2x^(-3).",
+      "solution": [
+        {
+          "text": "Rewrite as powers of x.",
+          "latex": "f(x) = 7x - 3x^{-3} + 2x^{4}"
+        },
+        {
+          "text": "Power rule on each term.",
+          "latex": "7 + 9x^{-4} + 8x^{3}"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = 8 x^{3} + 7 + \\frac{9}{x^{4}}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = 8 x^{3} + 7 + \\frac{9}{x^{2}}",
+          "f'(x) = 8 x^{3} + 7 + \\frac{9}{x^{4}}",
+          "f'(x) = - 8 x^{3} + 7 + \\frac{9}{x^{4}}",
+          "f'(x) = 8 x^{4} + 7 x + \\frac{9}{x^{3}}"
+        ],
+        "labels": [
+          "Power rule applied incorrectly to a negative exponent",
+          null,
+          "Sign error in one term",
+          "Power rule: forgot to lower the exponent"
+        ],
+        "correct": 1
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Réécrivez d'abord chaque fraction comme une puissance de x, par ex. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 8 x^{3} + 7 + \\frac{9}{x^{4}}",
+          "solution": [
+            {
+              "text": "Réécrire avec des puissances de x.",
+              "latex": "f(x) = 7x - 3x^{-3} + 2x^{4}"
+            },
+            {
+              "text": "Règle de la puissance sur chaque terme.",
+              "latex": "7 + 9x^{-4} + 8x^{3}"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = 8 x^{3} + 7 + \\frac{9}{x^{4}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = 8 x^{3} + 7 + \\frac{9}{x^{2}}",
+              "f'(x) = 8 x^{3} + 7 + \\frac{9}{x^{4}}",
+              "f'(x) = - 8 x^{3} + 7 + \\frac{9}{x^{4}}",
+              "f'(x) = 8 x^{4} + 7 x + \\frac{9}{x^{3}}"
+            ],
+            "labels": [
+              "Règle de la puissance mal appliquée à un exposant négatif",
+              null,
+              "Erreur de signe dans un terme",
+              "Règle de la puissance : a oublié de diminuer l'exposant"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Riscrivi prima ogni frazione come potenza di x, ad es. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = 8 x^{3} + 7 + \\frac{9}{x^{4}}",
+          "solution": [
+            {
+              "text": "Riscrivi come potenze di x.",
+              "latex": "f(x) = 7x - 3x^{-3} + 2x^{4}"
+            },
+            {
+              "text": "Regola della potenza su ogni termine.",
+              "latex": "7 + 9x^{-4} + 8x^{3}"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = 8 x^{3} + 7 + \\frac{9}{x^{4}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = 8 x^{3} + 7 + \\frac{9}{x^{2}}",
+              "f'(x) = 8 x^{3} + 7 + \\frac{9}{x^{4}}",
+              "f'(x) = - 8 x^{3} + 7 + \\frac{9}{x^{4}}",
+              "f'(x) = 8 x^{4} + 7 x + \\frac{9}{x^{3}}"
+            ],
+            "labels": [
+              "Regola della potenza applicata male a un esponente negativo",
+              null,
+              "Errore di segno in un termine",
+              "Regola della potenza: non ha abbassato l'esponente"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-der-08",
+      "topic": "derivatives",
+      "difficulty": 3,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = - \\frac{x^{3}}{2} + \\frac{6}{x}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "-2": "-6",
+          "2": "-3/2"
+        }
+      },
+      "answer_latex": "f'(x) = - \\frac{3 x^{2}}{2} - \\frac{6}{x^{2}}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Rewrite each fraction as a power of x first, e.g. 2/x^3 = 2x^(-3).",
+      "solution": [
+        {
+          "text": "Rewrite as powers of x.",
+          "latex": "f(x) = 6x^{-1} - \\tfrac{1}{2}x^{3}"
+        },
+        {
+          "text": "Power rule on each term.",
+          "latex": "-6x^{-2} - \\tfrac{3}{2}x^{2}"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = - \\frac{3 x^{2}}{2} - \\frac{6}{x^{2}}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = \\frac{3 x^{2}}{2} - \\frac{6}{x^{2}}",
+          "f'(x) = - \\frac{3 x^{2}}{2} - 6",
+          "f'(x) = - \\frac{3 x^{3}}{2} - \\frac{6}{x}",
+          "f'(x) = - \\frac{3 x^{2}}{2} - \\frac{6}{x^{2}}"
+        ],
+        "labels": [
+          "Sign error in one term",
+          "Power rule applied incorrectly to a negative exponent",
+          "Power rule: forgot to lower the exponent",
+          null
+        ],
+        "correct": 3
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Réécrivez d'abord chaque fraction comme une puissance de x, par ex. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = - \\frac{3 x^{2}}{2} - \\frac{6}{x^{2}}",
+          "solution": [
+            {
+              "text": "Réécrire avec des puissances de x.",
+              "latex": "f(x) = 6x^{-1} - \\tfrac{1}{2}x^{3}"
+            },
+            {
+              "text": "Règle de la puissance sur chaque terme.",
+              "latex": "-6x^{-2} - \\tfrac{3}{2}x^{2}"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = - \\frac{3 x^{2}}{2} - \\frac{6}{x^{2}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = \\frac{3 x^{2}}{2} - \\frac{6}{x^{2}}",
+              "f'(x) = - \\frac{3 x^{2}}{2} - 6",
+              "f'(x) = - \\frac{3 x^{3}}{2} - \\frac{6}{x}",
+              "f'(x) = - \\frac{3 x^{2}}{2} - \\frac{6}{x^{2}}"
+            ],
+            "labels": [
+              "Erreur de signe dans un terme",
+              "Règle de la puissance mal appliquée à un exposant négatif",
+              "Règle de la puissance : a oublié de diminuer l'exposant",
+              null
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Riscrivi prima ogni frazione come potenza di x, ad es. 2/x^3 = 2x^(-3).",
+          "answer_latex": "f'(x) = - \\frac{3 x^{2}}{2} - \\frac{6}{x^{2}}",
+          "solution": [
+            {
+              "text": "Riscrivi come potenze di x.",
+              "latex": "f(x) = 6x^{-1} - \\tfrac{1}{2}x^{3}"
+            },
+            {
+              "text": "Regola della potenza su ogni termine.",
+              "latex": "-6x^{-2} - \\tfrac{3}{2}x^{2}"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = - \\frac{3 x^{2}}{2} - \\frac{6}{x^{2}}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = \\frac{3 x^{2}}{2} - \\frac{6}{x^{2}}",
+              "f'(x) = - \\frac{3 x^{2}}{2} - 6",
+              "f'(x) = - \\frac{3 x^{3}}{2} - \\frac{6}{x}",
+              "f'(x) = - \\frac{3 x^{2}}{2} - \\frac{6}{x^{2}}"
+            ],
+            "labels": [
+              "Errore di segno in un termine",
+              "Regola della potenza applicata male a un esponente negativo",
+              "Regola della potenza: non ha abbassato l'esponente",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-chn-05",
+      "topic": "chain-rule",
+      "difficulty": 1,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = \\left(3 x - 2\\right)^{4}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "0": "-96",
+          "2": "-648",
+          "3": "324",
+          "1": "432"
+        }
+      },
+      "answer_latex": "f'(x) = 12 \\left(3 x - 2\\right)^{3}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Name the inner function u, differentiate the outside, then multiply by du/dx.",
+      "solution": [
+        {
+          "text": "Outer u^4, inner u = 3x − 2.",
+          "latex": "\\frac{d}{du}u^{4} = 4u^{3},\\quad \\frac{du}{dx} = 3"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = 12 \\left(3 x - 2\\right)^{3}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = 3 \\left(3 x - 2\\right)^{4}",
+          "f'(x) = 4 \\left(3 x - 2\\right)^{4}",
+          "f'(x) = 4 \\left(3 x - 2\\right)^{3}",
+          "f'(x) = 12 \\left(3 x - 2\\right)^{3}"
+        ],
+        "labels": [
+          "Didn't differentiate the outer function",
+          "Multiplied by the inner function instead of its derivative",
+          "Forgot to multiply by the inner function's derivative",
+          null
+        ],
+        "correct": 3
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Nommez u la fonction intérieure, dérivez la fonction extérieure, puis multipliez par du/dx.",
+          "answer_latex": "f'(x) = 12 \\left(3 x - 2\\right)^{3}",
+          "solution": [
+            {
+              "text": "Extérieure u^4, intérieure u = 3x − 2.",
+              "latex": "\\frac{d}{du}u^{4} = 4u^{3},\\quad \\frac{du}{dx} = 3"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = 12 \\left(3 x - 2\\right)^{3}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = 3 \\left(3 x - 2\\right)^{4}",
+              "f'(x) = 4 \\left(3 x - 2\\right)^{4}",
+              "f'(x) = 4 \\left(3 x - 2\\right)^{3}",
+              "f'(x) = 12 \\left(3 x - 2\\right)^{3}"
+            ],
+            "labels": [
+              "N'a pas dérivé la fonction extérieure",
+              "A multiplié par la fonction intérieure au lieu de sa dérivée",
+              "A oublié de multiplier par la dérivée de la fonction intérieure",
+              null
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Chiama u la funzione interna, deriva la funzione esterna, poi moltiplica per du/dx.",
+          "answer_latex": "f'(x) = 12 \\left(3 x - 2\\right)^{3}",
+          "solution": [
+            {
+              "text": "Esterna u^4, interna u = 3x − 2.",
+              "latex": "\\frac{d}{du}u^{4} = 4u^{3},\\quad \\frac{du}{dx} = 3"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = 12 \\left(3 x - 2\\right)^{3}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = 3 \\left(3 x - 2\\right)^{4}",
+              "f'(x) = 4 \\left(3 x - 2\\right)^{4}",
+              "f'(x) = 4 \\left(3 x - 2\\right)^{3}",
+              "f'(x) = 12 \\left(3 x - 2\\right)^{3}"
+            ],
+            "labels": [
+              "Non ha derivato la funzione esterna",
+              "Ha moltiplicato per la funzione interna invece che per la sua derivata",
+              "Ha dimenticato di moltiplicare per la derivata della funzione interna",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-chn-06",
+      "topic": "chain-rule",
+      "difficulty": 2,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = \\left(1 - x^{2}\\right)^{4}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "5": "-24",
+          "1": "-8",
+          "7": "8",
+          "3": "24"
+        }
+      },
+      "answer_latex": "f'(x) = - 8 x \\left(1 - x^{2}\\right)^{3}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Name the inner function u, differentiate the outside, then multiply by du/dx.",
+      "solution": [
+        {
+          "text": "Outer u^4, inner u = 1 − x^2.",
+          "latex": "\\frac{d}{du}u^{4} = 4u^{3},\\quad \\frac{du}{dx} = -2x"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = - 8 x \\left(1 - x^{2}\\right)^{3}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = - 2 x \\left(1 - x^{2}\\right)^{4}",
+          "f'(x) = - 8 x \\left(1 - x^{2}\\right)^{3}",
+          "f'(x) = 4 \\left(1 - x^{2}\\right)^{3}",
+          "f'(x) = 4 \\left(1 - x^{2}\\right)^{4}"
+        ],
+        "labels": [
+          "Didn't differentiate the outer function",
+          null,
+          "Forgot to multiply by the inner function's derivative",
+          "Multiplied by the inner function instead of its derivative"
+        ],
+        "correct": 1
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Nommez u la fonction intérieure, dérivez la fonction extérieure, puis multipliez par du/dx.",
+          "answer_latex": "f'(x) = - 8 x \\left(1 - x^{2}\\right)^{3}",
+          "solution": [
+            {
+              "text": "Extérieure u^4, intérieure u = 1 − x^2.",
+              "latex": "\\frac{d}{du}u^{4} = 4u^{3},\\quad \\frac{du}{dx} = -2x"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = - 8 x \\left(1 - x^{2}\\right)^{3}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = - 2 x \\left(1 - x^{2}\\right)^{4}",
+              "f'(x) = - 8 x \\left(1 - x^{2}\\right)^{3}",
+              "f'(x) = 4 \\left(1 - x^{2}\\right)^{3}",
+              "f'(x) = 4 \\left(1 - x^{2}\\right)^{4}"
+            ],
+            "labels": [
+              "N'a pas dérivé la fonction extérieure",
+              null,
+              "A oublié de multiplier par la dérivée de la fonction intérieure",
+              "A multiplié par la fonction intérieure au lieu de sa dérivée"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Chiama u la funzione interna, deriva la funzione esterna, poi moltiplica per du/dx.",
+          "answer_latex": "f'(x) = - 8 x \\left(1 - x^{2}\\right)^{3}",
+          "solution": [
+            {
+              "text": "Esterna u^4, interna u = 1 − x^2.",
+              "latex": "\\frac{d}{du}u^{4} = 4u^{3},\\quad \\frac{du}{dx} = -2x"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = - 8 x \\left(1 - x^{2}\\right)^{3}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = - 2 x \\left(1 - x^{2}\\right)^{4}",
+              "f'(x) = - 8 x \\left(1 - x^{2}\\right)^{3}",
+              "f'(x) = 4 \\left(1 - x^{2}\\right)^{3}",
+              "f'(x) = 4 \\left(1 - x^{2}\\right)^{4}"
+            ],
+            "labels": [
+              "Non ha derivato la funzione esterna",
+              null,
+              "Ha dimenticato di moltiplicare per la derivata della funzione interna",
+              "Ha moltiplicato per la funzione interna invece che per la sua derivata"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-chn-07",
+      "topic": "chain-rule",
+      "difficulty": 3,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = \\left(2 x^{2} + 3 x\\right)^{3}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "5": "48",
+          "2": "81",
+          "4": "180",
+          "3": "216"
+        }
+      },
+      "answer_latex": "f'(x) = \\left(12 x + 9\\right) \\left(2 x^{2} + 3 x\\right)^{2}",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Name the inner function u, differentiate the outside, then multiply by du/dx.",
+      "solution": [
+        {
+          "text": "Outer u^3, inner u = 2x^2 + 3x.",
+          "latex": "\\frac{d}{du}u^{3} = 3u^{2},\\quad \\frac{du}{dx} = 4x + 3"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = \\left(12 x + 9\\right) \\left(2 x^{2} + 3 x\\right)^{2}"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = \\left(12 x + 9\\right) \\left(2 x^{2} + 3 x\\right)^{2}",
+          "f'(x) = 3 \\left(2 x^{2} + 3 x\\right)^{3}",
+          "f'(x) = 3 \\left(2 x^{2} + 3 x\\right)^{2}",
+          "f'(x) = \\left(4 x + 3\\right) \\left(2 x^{2} + 3 x\\right)^{3}"
+        ],
+        "labels": [
+          null,
+          "Multiplied by the inner function instead of its derivative",
+          "Forgot to multiply by the inner function's derivative",
+          "Didn't differentiate the outer function"
+        ],
+        "correct": 0
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Nommez u la fonction intérieure, dérivez la fonction extérieure, puis multipliez par du/dx.",
+          "answer_latex": "f'(x) = \\left(12 x + 9\\right) \\left(2 x^{2} + 3 x\\right)^{2}",
+          "solution": [
+            {
+              "text": "Extérieure u^3, intérieure u = 2x^2 + 3x.",
+              "latex": "\\frac{d}{du}u^{3} = 3u^{2},\\quad \\frac{du}{dx} = 4x + 3"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = \\left(12 x + 9\\right) \\left(2 x^{2} + 3 x\\right)^{2}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = \\left(12 x + 9\\right) \\left(2 x^{2} + 3 x\\right)^{2}",
+              "f'(x) = 3 \\left(2 x^{2} + 3 x\\right)^{3}",
+              "f'(x) = 3 \\left(2 x^{2} + 3 x\\right)^{2}",
+              "f'(x) = \\left(4 x + 3\\right) \\left(2 x^{2} + 3 x\\right)^{3}"
+            ],
+            "labels": [
+              null,
+              "A multiplié par la fonction intérieure au lieu de sa dérivée",
+              "A oublié de multiplier par la dérivée de la fonction intérieure",
+              "N'a pas dérivé la fonction extérieure"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Chiama u la funzione interna, deriva la funzione esterna, poi moltiplica per du/dx.",
+          "answer_latex": "f'(x) = \\left(12 x + 9\\right) \\left(2 x^{2} + 3 x\\right)^{2}",
+          "solution": [
+            {
+              "text": "Esterna u^3, interna u = 2x^2 + 3x.",
+              "latex": "\\frac{d}{du}u^{3} = 3u^{2},\\quad \\frac{du}{dx} = 4x + 3"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = \\left(12 x + 9\\right) \\left(2 x^{2} + 3 x\\right)^{2}"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = \\left(12 x + 9\\right) \\left(2 x^{2} + 3 x\\right)^{2}",
+              "f'(x) = 3 \\left(2 x^{2} + 3 x\\right)^{3}",
+              "f'(x) = 3 \\left(2 x^{2} + 3 x\\right)^{2}",
+              "f'(x) = \\left(4 x + 3\\right) \\left(2 x^{2} + 3 x\\right)^{3}"
+            ],
+            "labels": [
+              null,
+              "Ha moltiplicato per la funzione interna invece che per la sua derivata",
+              "Ha dimenticato di moltiplicare per la derivata della funzione interna",
+              "Non ha derivato la funzione esterna"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-chn-08",
+      "topic": "chain-rule",
+      "difficulty": 2,
+      "prompt": "Find f′(x). Type your answer in terms of x.",
+      "latex": "f(x) = \\left(x^{4} + 2\\right)^{2}",
+      "answer": {
+        "kind": "expression",
+        "coeffs": {
+          "7": "8",
+          "3": "16"
+        }
+      },
+      "answer_latex": "f'(x) = 8 x^{3} \\left(x^{4} + 2\\right)",
+      "input_help": "Use ^ for powers and * or nothing for multiplication, e.g. 12x^3 - 6x^(-4) or 8(2x+3)^3.",
+      "hint": "Name the inner function u, differentiate the outside, then multiply by du/dx.",
+      "solution": [
+        {
+          "text": "Outer u^2, inner u = x^4 + 2.",
+          "latex": "\\frac{d}{du}u^{2} = 2u,\\quad \\frac{du}{dx} = 4x^{3}"
+        },
+        {
+          "text": "Answer.",
+          "latex": "f'(x) = 8 x^{3} \\left(x^{4} + 2\\right)"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which of these is f′(x)?",
+        "options": [
+          "f'(x) = 2 x^{4} + 4",
+          "f'(x) = 8 x^{3} \\left(x^{4} + 2\\right)",
+          "f'(x) = 4 x^{3} \\left(x^{4} + 2\\right)^{2}",
+          "f'(x) = \\left(x^{4} + 2\\right) \\left(2 x^{4} + 4\\right)"
+        ],
+        "labels": [
+          "Forgot to multiply by the inner function's derivative",
+          null,
+          "Didn't differentiate the outer function",
+          "Multiplied by the inner function instead of its derivative"
+        ],
+        "correct": 1
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Calculez f′(x). Écrivez votre réponse en fonction de x.",
+          "input_help": "Utilisez ^ pour les puissances et * (ou rien) pour la multiplication, par ex. 12x^3 - 6x^(-4) ou 8(2x+3)^3.",
+          "hint": "Nommez u la fonction intérieure, dérivez la fonction extérieure, puis multipliez par du/dx.",
+          "answer_latex": "f'(x) = 8 x^{3} \\left(x^{4} + 2\\right)",
+          "solution": [
+            {
+              "text": "Extérieure u^2, intérieure u = x^4 + 2.",
+              "latex": "\\frac{d}{du}u^{2} = 2u,\\quad \\frac{du}{dx} = 4x^{3}"
+            },
+            {
+              "text": "Réponse.",
+              "latex": "f'(x) = 8 x^{3} \\left(x^{4} + 2\\right)"
+            }
+          ],
+          "mcq": {
+            "prompt": "Laquelle de ces expressions est f′(x) ?",
+            "options": [
+              "f'(x) = 2 x^{4} + 4",
+              "f'(x) = 8 x^{3} \\left(x^{4} + 2\\right)",
+              "f'(x) = 4 x^{3} \\left(x^{4} + 2\\right)^{2}",
+              "f'(x) = \\left(x^{4} + 2\\right) \\left(2 x^{4} + 4\\right)"
+            ],
+            "labels": [
+              "A oublié de multiplier par la dérivée de la fonction intérieure",
+              null,
+              "N'a pas dérivé la fonction extérieure",
+              "A multiplié par la fonction intérieure au lieu de sa dérivée"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Calcola f′(x). Scrivi la risposta in funzione di x.",
+          "input_help": "Usa ^ per le potenze e * (o niente) per la moltiplicazione, ad es. 12x^3 - 6x^(-4) o 8(2x+3)^3.",
+          "hint": "Chiama u la funzione interna, deriva la funzione esterna, poi moltiplica per du/dx.",
+          "answer_latex": "f'(x) = 8 x^{3} \\left(x^{4} + 2\\right)",
+          "solution": [
+            {
+              "text": "Esterna u^2, interna u = x^4 + 2.",
+              "latex": "\\frac{d}{du}u^{2} = 2u,\\quad \\frac{du}{dx} = 4x^{3}"
+            },
+            {
+              "text": "Risposta.",
+              "latex": "f'(x) = 8 x^{3} \\left(x^{4} + 2\\right)"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale di queste è f′(x)?",
+            "options": [
+              "f'(x) = 2 x^{4} + 4",
+              "f'(x) = 8 x^{3} \\left(x^{4} + 2\\right)",
+              "f'(x) = 4 x^{3} \\left(x^{4} + 2\\right)^{2}",
+              "f'(x) = \\left(x^{4} + 2\\right) \\left(2 x^{4} + 4\\right)"
+            ],
+            "labels": [
+              "Ha dimenticato di moltiplicare per la derivata della funzione interna",
+              null,
+              "Non ha derivato la funzione esterna",
+              "Ha moltiplicato per la funzione interna invece che per la sua derivata"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-crt-05",
+      "topic": "critical-points",
+      "difficulty": 1,
+      "prompt": "Find every critical point of f. List the x-values, separated by commas.",
+      "latex": "f(x) = x^{3} - 3 x",
+      "answer": {
+        "kind": "points",
+        "values": [
+          "-1",
+          "1"
+        ]
+      },
+      "answer_latex": "x = -1, x = 1",
+      "input_help": "Separate values with commas, e.g. -1, 3. Fractions like 2/3 are fine.",
+      "hint": "Solve f′(x) = 0, not f(x) = 0. Factor f′(x) first.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 3 x^{2} - 3 = 3 \\left(x - 1\\right) \\left(x + 1\\right)"
+        },
+        {
+          "text": "Set f′(x) = 0 and solve.",
+          "latex": "x = -1, x = 1"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which list gives all the critical points of f?",
+        "options": [
+          "x = -1, x = 1, x = 2",
+          "x = -1",
+          "x = -1, x = 1",
+          "x = 0"
+        ],
+        "labels": [
+          "Included a value where f′(x) ≠ 0",
+          "Missed one of the solutions",
+          null,
+          "Solved f(x) = 0 instead of f′(x) = 0"
+        ],
+        "correct": 2
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez tous les points critiques de f. Donnez les valeurs de x, séparées par des virgules.",
+          "input_help": "Séparez les valeurs par des virgules, par ex. -1, 3. Les fractions comme 2/3 sont acceptées.",
+          "hint": "Résolvez f′(x) = 0, et non f(x) = 0. Factorisez d'abord f′(x).",
+          "answer_latex": "x = -1, x = 1",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 3 x^{2} - 3 = 3 \\left(x - 1\\right) \\left(x + 1\\right)"
+            },
+            {
+              "text": "Poser f′(x) = 0 et résoudre.",
+              "latex": "x = -1, x = 1"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quelle liste donne tous les points critiques de f ?",
+            "options": [
+              "x = -1, x = 1, x = 2",
+              "x = -1",
+              "x = -1, x = 1",
+              "x = 0"
+            ],
+            "labels": [
+              "A inclus une valeur où f′(x) ≠ 0",
+              "A oublié une des solutions",
+              null,
+              "A résolu f(x) = 0 au lieu de f′(x) = 0"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova tutti i punti critici di f. Elenca i valori di x, separati da virgole.",
+          "input_help": "Separa i valori con virgole, ad es. -1, 3. Le frazioni come 2/3 vanno bene.",
+          "hint": "Risolvi f′(x) = 0, non f(x) = 0. Prima fattorizza f′(x).",
+          "answer_latex": "x = -1, x = 1",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 3 x^{2} - 3 = 3 \\left(x - 1\\right) \\left(x + 1\\right)"
+            },
+            {
+              "text": "Poni f′(x) = 0 e risolvi.",
+              "latex": "x = -1, x = 1"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale elenco contiene tutti i punti critici di f?",
+            "options": [
+              "x = -1, x = 1, x = 2",
+              "x = -1",
+              "x = -1, x = 1",
+              "x = 0"
+            ],
+            "labels": [
+              "Ha incluso un valore in cui f′(x) ≠ 0",
+              "Ha perso una delle soluzioni",
+              null,
+              "Ha risolto f(x) = 0 invece di f′(x) = 0"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-crt-06",
+      "topic": "critical-points",
+      "difficulty": 2,
+      "prompt": "Find every critical point of f. List the x-values, separated by commas.",
+      "latex": "f(x) = x^{3} + 3 x^{2} - 24 x",
+      "answer": {
+        "kind": "points",
+        "values": [
+          "-4",
+          "2"
+        ]
+      },
+      "answer_latex": "x = -4, x = 2",
+      "input_help": "Separate values with commas, e.g. -1, 3. Fractions like 2/3 are fine.",
+      "hint": "Solve f′(x) = 0, not f(x) = 0. Factor f′(x) first.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 3 x^{2} + 6 x - 24 = 3 \\left(x - 2\\right) \\left(x + 4\\right)"
+        },
+        {
+          "text": "Set f′(x) = 0 and solve.",
+          "latex": "x = -4, x = 2"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which list gives all the critical points of f?",
+        "options": [
+          "x = 0",
+          "x = -4",
+          "x = -4, x = 2",
+          "x = -2, x = 4"
+        ],
+        "labels": [
+          "Solved f(x) = 0 instead of f′(x) = 0",
+          "Missed one of the solutions",
+          null,
+          "Sign error when solving f′(x) = 0"
+        ],
+        "correct": 2
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez tous les points critiques de f. Donnez les valeurs de x, séparées par des virgules.",
+          "input_help": "Séparez les valeurs par des virgules, par ex. -1, 3. Les fractions comme 2/3 sont acceptées.",
+          "hint": "Résolvez f′(x) = 0, et non f(x) = 0. Factorisez d'abord f′(x).",
+          "answer_latex": "x = -4, x = 2",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 3 x^{2} + 6 x - 24 = 3 \\left(x - 2\\right) \\left(x + 4\\right)"
+            },
+            {
+              "text": "Poser f′(x) = 0 et résoudre.",
+              "latex": "x = -4, x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quelle liste donne tous les points critiques de f ?",
+            "options": [
+              "x = 0",
+              "x = -4",
+              "x = -4, x = 2",
+              "x = -2, x = 4"
+            ],
+            "labels": [
+              "A résolu f(x) = 0 au lieu de f′(x) = 0",
+              "A oublié une des solutions",
+              null,
+              "Erreur de signe en résolvant f′(x) = 0"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova tutti i punti critici di f. Elenca i valori di x, separati da virgole.",
+          "input_help": "Separa i valori con virgole, ad es. -1, 3. Le frazioni come 2/3 vanno bene.",
+          "hint": "Risolvi f′(x) = 0, non f(x) = 0. Prima fattorizza f′(x).",
+          "answer_latex": "x = -4, x = 2",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 3 x^{2} + 6 x - 24 = 3 \\left(x - 2\\right) \\left(x + 4\\right)"
+            },
+            {
+              "text": "Poni f′(x) = 0 e risolvi.",
+              "latex": "x = -4, x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale elenco contiene tutti i punti critici di f?",
+            "options": [
+              "x = 0",
+              "x = -4",
+              "x = -4, x = 2",
+              "x = -2, x = 4"
+            ],
+            "labels": [
+              "Ha risolto f(x) = 0 invece di f′(x) = 0",
+              "Ha perso una delle soluzioni",
+              null,
+              "Errore di segno nel risolvere f′(x) = 0"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-crt-07",
+      "topic": "critical-points",
+      "difficulty": 3,
+      "prompt": "Find every critical point of f. List the x-values, separated by commas.",
+      "latex": "f(x) = x^{4} - 4 x^{3}",
+      "answer": {
+        "kind": "points",
+        "values": [
+          "0",
+          "3"
+        ]
+      },
+      "answer_latex": "x = 0, x = 3",
+      "input_help": "Separate values with commas, e.g. -1, 3. Fractions like 2/3 are fine.",
+      "hint": "Factor f′(x) completely, including any power of x.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 4 x^{3} - 12 x^{2} = 4 x^{2} \\left(x - 3\\right)"
+        },
+        {
+          "text": "Set f′(x) = 0 and solve.",
+          "latex": "x = 0, x = 3"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which list gives all the critical points of f?",
+        "options": [
+          "x = 0, x = 3",
+          "x = -3, x = 0",
+          "x = 0, x = 4",
+          "x = 0"
+        ],
+        "labels": [
+          null,
+          "Sign error when solving f′(x) = 0",
+          "Solved f(x) = 0 instead of f′(x) = 0",
+          "Missed one of the solutions"
+        ],
+        "correct": 0
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez tous les points critiques de f. Donnez les valeurs de x, séparées par des virgules.",
+          "input_help": "Séparez les valeurs par des virgules, par ex. -1, 3. Les fractions comme 2/3 sont acceptées.",
+          "hint": "Factorisez complètement f′(x), y compris les puissances de x.",
+          "answer_latex": "x = 0, x = 3",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 4 x^{3} - 12 x^{2} = 4 x^{2} \\left(x - 3\\right)"
+            },
+            {
+              "text": "Poser f′(x) = 0 et résoudre.",
+              "latex": "x = 0, x = 3"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quelle liste donne tous les points critiques de f ?",
+            "options": [
+              "x = 0, x = 3",
+              "x = -3, x = 0",
+              "x = 0, x = 4",
+              "x = 0"
+            ],
+            "labels": [
+              null,
+              "Erreur de signe en résolvant f′(x) = 0",
+              "A résolu f(x) = 0 au lieu de f′(x) = 0",
+              "A oublié une des solutions"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova tutti i punti critici di f. Elenca i valori di x, separati da virgole.",
+          "input_help": "Separa i valori con virgole, ad es. -1, 3. Le frazioni come 2/3 vanno bene.",
+          "hint": "Fattorizza completamente f′(x), comprese le potenze di x.",
+          "answer_latex": "x = 0, x = 3",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 4 x^{3} - 12 x^{2} = 4 x^{2} \\left(x - 3\\right)"
+            },
+            {
+              "text": "Poni f′(x) = 0 e risolvi.",
+              "latex": "x = 0, x = 3"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale elenco contiene tutti i punti critici di f?",
+            "options": [
+              "x = 0, x = 3",
+              "x = -3, x = 0",
+              "x = 0, x = 4",
+              "x = 0"
+            ],
+            "labels": [
+              null,
+              "Errore di segno nel risolvere f′(x) = 0",
+              "Ha risolto f(x) = 0 invece di f′(x) = 0",
+              "Ha perso una delle soluzioni"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-crt-08",
+      "topic": "critical-points",
+      "difficulty": 2,
+      "prompt": "Find every critical point of f. List the x-values, separated by commas.",
+      "latex": "f(x) = 2 x^{3} - 9 x^{2} + 12 x + 1",
+      "answer": {
+        "kind": "points",
+        "values": [
+          "1",
+          "2"
+        ]
+      },
+      "answer_latex": "x = 1, x = 2",
+      "input_help": "Separate values with commas, e.g. -1, 3. Fractions like 2/3 are fine.",
+      "hint": "Solve f′(x) = 0, not f(x) = 0. Factor f′(x) first.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 6 x^{2} - 18 x + 12 = 6 \\left(x - 2\\right) \\left(x - 1\\right)"
+        },
+        {
+          "text": "Set f′(x) = 0 and solve.",
+          "latex": "x = 1, x = 2"
+        }
+      ],
+      "mcq": {
+        "prompt": "Which list gives all the critical points of f?",
+        "options": [
+          "x = 1, x = 2, x = 3",
+          "x = 1, x = 2",
+          "x = 1",
+          "x = -2, x = -1"
+        ],
+        "labels": [
+          "Included a value where f′(x) ≠ 0",
+          null,
+          "Missed one of the solutions",
+          "Sign error when solving f′(x) = 0"
+        ],
+        "correct": 1
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez tous les points critiques de f. Donnez les valeurs de x, séparées par des virgules.",
+          "input_help": "Séparez les valeurs par des virgules, par ex. -1, 3. Les fractions comme 2/3 sont acceptées.",
+          "hint": "Résolvez f′(x) = 0, et non f(x) = 0. Factorisez d'abord f′(x).",
+          "answer_latex": "x = 1, x = 2",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 6 x^{2} - 18 x + 12 = 6 \\left(x - 2\\right) \\left(x - 1\\right)"
+            },
+            {
+              "text": "Poser f′(x) = 0 et résoudre.",
+              "latex": "x = 1, x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quelle liste donne tous les points critiques de f ?",
+            "options": [
+              "x = 1, x = 2, x = 3",
+              "x = 1, x = 2",
+              "x = 1",
+              "x = -2, x = -1"
+            ],
+            "labels": [
+              "A inclus une valeur où f′(x) ≠ 0",
+              null,
+              "A oublié une des solutions",
+              "Erreur de signe en résolvant f′(x) = 0"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova tutti i punti critici di f. Elenca i valori di x, separati da virgole.",
+          "input_help": "Separa i valori con virgole, ad es. -1, 3. Le frazioni come 2/3 vanno bene.",
+          "hint": "Risolvi f′(x) = 0, non f(x) = 0. Prima fattorizza f′(x).",
+          "answer_latex": "x = 1, x = 2",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 6 x^{2} - 18 x + 12 = 6 \\left(x - 2\\right) \\left(x - 1\\right)"
+            },
+            {
+              "text": "Poni f′(x) = 0 e risolvi.",
+              "latex": "x = 1, x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quale elenco contiene tutti i punti critici di f?",
+            "options": [
+              "x = 1, x = 2, x = 3",
+              "x = 1, x = 2",
+              "x = 1",
+              "x = -2, x = -1"
+            ],
+            "labels": [
+              "Ha incluso un valore in cui f′(x) ≠ 0",
+              null,
+              "Ha perso una delle soluzioni",
+              "Errore di segno nel risolvere f′(x) = 0"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-int-06",
+      "topic": "closed-interval",
+      "difficulty": 3,
+      "prompt": "Find the absolute maximum of f on the interval, and every x where it happens.",
+      "latex": "f(x) = x^{3} - 6 x^{2} + 9 x + 1,\\quad x \\in [0,\\,4]",
+      "answer": {
+        "kind": "extremum",
+        "extremum": "max",
+        "value": "5",
+        "at": [
+          "1",
+          "4"
+        ]
+      },
+      "answer_latex": "\\text{absolute maximum } = 5 \\text{ at } x = 1, x = 4",
+      "input_help": "Enter the value, then the x-value(s). Separate several x-values with commas.",
+      "hint": "Candidates are the critical points inside the interval and both endpoints. Evaluate f at all of them. Two candidates can tie.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 3 x^{2} - 12 x + 9 = 3 \\left(x - 3\\right) \\left(x - 1\\right)"
+        },
+        {
+          "text": "Critical points inside [0, 4].",
+          "latex": "x = 1, x = 3"
+        },
+        {
+          "text": "Evaluate at the critical points and both endpoints.",
+          "latex": "f(0) = 1,\\; f(1) = 5,\\; f(3) = 1,\\; f(4) = 5"
+        },
+        {
+          "text": "Compare.",
+          "latex": "\\text{absolute maximum } = 5 \\text{ at } x = 1, x = 4"
+        }
+      ],
+      "mcq": {
+        "prompt": "What is the absolute maximum of f on the interval, and where?",
+        "options": [
+          "\\text{absolute maximum } = 1 \\text{ at } x = 0, x = 3",
+          "\\text{absolute maximum } = 5 \\text{ at } x = 1",
+          "\\text{absolute maximum } = 5 \\text{ at } x = 0",
+          "\\text{absolute maximum } = 5 \\text{ at } x = 1, x = 4"
+        ],
+        "labels": [
+          "Found the minimum instead",
+          "Forgot to evaluate the interval endpoints",
+          "Right value, wrong location",
+          null
+        ],
+        "correct": 3
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez le maximum absolu de f sur l'intervalle, et toutes les valeurs de x où il est atteint.",
+          "input_help": "Saisissez la valeur, puis la ou les valeurs de x. Séparez plusieurs valeurs de x par des virgules.",
+          "hint": "Les candidats sont les points critiques dans l'intervalle et les deux bornes. Évaluez f en chacun d'eux. Deux candidats peuvent être à égalité.",
+          "answer_latex": "\\text{maximum absolu } = 5 \\text{ en } x = 1, x = 4",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 3 x^{2} - 12 x + 9 = 3 \\left(x - 3\\right) \\left(x - 1\\right)"
+            },
+            {
+              "text": "Points critiques dans [0, 4].",
+              "latex": "x = 1, x = 3"
+            },
+            {
+              "text": "Évaluer aux points critiques et aux deux bornes.",
+              "latex": "f(0) = 1,\\; f(1) = 5,\\; f(3) = 1,\\; f(4) = 5"
+            },
+            {
+              "text": "Comparer.",
+              "latex": "\\text{maximum absolu } = 5 \\text{ en } x = 1, x = 4"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quel est le maximum absolu de f sur l'intervalle, et où est-il atteint ?",
+            "options": [
+              "\\text{maximum absolu } = 1 \\text{ en } x = 0, x = 3",
+              "\\text{maximum absolu } = 5 \\text{ en } x = 1",
+              "\\text{maximum absolu } = 5 \\text{ en } x = 0",
+              "\\text{maximum absolu } = 5 \\text{ en } x = 1, x = 4"
+            ],
+            "labels": [
+              "A trouvé le minimum à la place",
+              "A oublié d'évaluer les bornes de l'intervalle",
+              "Bonne valeur, mauvais point",
+              null
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova il massimo assoluto di f sull'intervallo e tutti i valori di x in cui si raggiunge.",
+          "input_help": "Inserisci il valore, poi il valore o i valori di x. Separa più valori di x con virgole.",
+          "hint": "I candidati sono i punti critici interni all'intervallo e i due estremi. Valuta f in ciascuno. Due candidati possono essere a pari merito.",
+          "answer_latex": "\\text{massimo assoluto } = 5 \\text{ in } x = 1, x = 4",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 3 x^{2} - 12 x + 9 = 3 \\left(x - 3\\right) \\left(x - 1\\right)"
+            },
+            {
+              "text": "Punti critici interni a [0, 4].",
+              "latex": "x = 1, x = 3"
+            },
+            {
+              "text": "Valuta nei punti critici e nei due estremi.",
+              "latex": "f(0) = 1,\\; f(1) = 5,\\; f(3) = 1,\\; f(4) = 5"
+            },
+            {
+              "text": "Confronta.",
+              "latex": "\\text{massimo assoluto } = 5 \\text{ in } x = 1, x = 4"
+            }
+          ],
+          "mcq": {
+            "prompt": "Qual è il massimo assoluto di f sull'intervallo, e dove si raggiunge?",
+            "options": [
+              "\\text{massimo assoluto } = 1 \\text{ in } x = 0, x = 3",
+              "\\text{massimo assoluto } = 5 \\text{ in } x = 1",
+              "\\text{massimo assoluto } = 5 \\text{ in } x = 0",
+              "\\text{massimo assoluto } = 5 \\text{ in } x = 1, x = 4"
+            ],
+            "labels": [
+              "Ha trovato invece il minimo",
+              "Ha dimenticato di valutare gli estremi dell'intervallo",
+              "Valore giusto, punto sbagliato",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-int-07",
+      "topic": "closed-interval",
+      "difficulty": 3,
+      "prompt": "Find the absolute minimum of f on the interval, and every x where it happens.",
+      "latex": "f(x) = x^{3} - 3 x^{2} + 1,\\quad x \\in [-1,\\,3]",
+      "answer": {
+        "kind": "extremum",
+        "extremum": "min",
+        "value": "-3",
+        "at": [
+          "-1",
+          "2"
+        ]
+      },
+      "answer_latex": "\\text{absolute minimum } = -3 \\text{ at } x = -1, x = 2",
+      "input_help": "Enter the value, then the x-value(s). Separate several x-values with commas.",
+      "hint": "Candidates are the critical points inside the interval and both endpoints. Evaluate f at all of them. Two candidates can tie.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 3 x^{2} - 6 x = 3 x \\left(x - 2\\right)"
+        },
+        {
+          "text": "Critical points inside [-1, 3].",
+          "latex": "x = 0, x = 2"
+        },
+        {
+          "text": "Evaluate at the critical points and both endpoints.",
+          "latex": "f(-1) = -3,\\; f(0) = 1,\\; f(2) = -3,\\; f(3) = 1"
+        },
+        {
+          "text": "Compare.",
+          "latex": "\\text{absolute minimum } = -3 \\text{ at } x = -1, x = 2"
+        }
+      ],
+      "mcq": {
+        "prompt": "What is the absolute minimum of f on the interval, and where?",
+        "options": [
+          "\\text{absolute minimum } = -3 \\text{ at } x = 3",
+          "\\text{absolute minimum } = -3 \\text{ at } x = 2",
+          "\\text{absolute minimum } = -3 \\text{ at } x = -1, x = 2",
+          "\\text{absolute minimum } = 1 \\text{ at } x = 0, x = 3"
+        ],
+        "labels": [
+          "Right value, wrong location",
+          "Forgot to evaluate the interval endpoints",
+          null,
+          "Found the maximum instead"
+        ],
+        "correct": 2
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez le minimum absolu de f sur l'intervalle, et toutes les valeurs de x où il est atteint.",
+          "input_help": "Saisissez la valeur, puis la ou les valeurs de x. Séparez plusieurs valeurs de x par des virgules.",
+          "hint": "Les candidats sont les points critiques dans l'intervalle et les deux bornes. Évaluez f en chacun d'eux. Deux candidats peuvent être à égalité.",
+          "answer_latex": "\\text{minimum absolu } = -3 \\text{ en } x = -1, x = 2",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 3 x^{2} - 6 x = 3 x \\left(x - 2\\right)"
+            },
+            {
+              "text": "Points critiques dans [-1, 3].",
+              "latex": "x = 0, x = 2"
+            },
+            {
+              "text": "Évaluer aux points critiques et aux deux bornes.",
+              "latex": "f(-1) = -3,\\; f(0) = 1,\\; f(2) = -3,\\; f(3) = 1"
+            },
+            {
+              "text": "Comparer.",
+              "latex": "\\text{minimum absolu } = -3 \\text{ en } x = -1, x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quel est le minimum absolu de f sur l'intervalle, et où est-il atteint ?",
+            "options": [
+              "\\text{minimum absolu } = -3 \\text{ en } x = 3",
+              "\\text{minimum absolu } = -3 \\text{ en } x = 2",
+              "\\text{minimum absolu } = -3 \\text{ en } x = -1, x = 2",
+              "\\text{minimum absolu } = 1 \\text{ en } x = 0, x = 3"
+            ],
+            "labels": [
+              "Bonne valeur, mauvais point",
+              "A oublié d'évaluer les bornes de l'intervalle",
+              null,
+              "A trouvé le maximum à la place"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova il minimo assoluto di f sull'intervallo e tutti i valori di x in cui si raggiunge.",
+          "input_help": "Inserisci il valore, poi il valore o i valori di x. Separa più valori di x con virgole.",
+          "hint": "I candidati sono i punti critici interni all'intervallo e i due estremi. Valuta f in ciascuno. Due candidati possono essere a pari merito.",
+          "answer_latex": "\\text{minimo assoluto } = -3 \\text{ in } x = -1, x = 2",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 3 x^{2} - 6 x = 3 x \\left(x - 2\\right)"
+            },
+            {
+              "text": "Punti critici interni a [-1, 3].",
+              "latex": "x = 0, x = 2"
+            },
+            {
+              "text": "Valuta nei punti critici e nei due estremi.",
+              "latex": "f(-1) = -3,\\; f(0) = 1,\\; f(2) = -3,\\; f(3) = 1"
+            },
+            {
+              "text": "Confronta.",
+              "latex": "\\text{minimo assoluto } = -3 \\text{ in } x = -1, x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Qual è il minimo assoluto di f sull'intervallo, e dove si raggiunge?",
+            "options": [
+              "\\text{minimo assoluto } = -3 \\text{ in } x = 3",
+              "\\text{minimo assoluto } = -3 \\text{ in } x = 2",
+              "\\text{minimo assoluto } = -3 \\text{ in } x = -1, x = 2",
+              "\\text{minimo assoluto } = 1 \\text{ in } x = 0, x = 3"
+            ],
+            "labels": [
+              "Valore giusto, punto sbagliato",
+              "Ha dimenticato di valutare gli estremi dell'intervallo",
+              null,
+              "Ha trovato invece il massimo"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-int-08",
+      "topic": "closed-interval",
+      "difficulty": 1,
+      "prompt": "Find the absolute maximum of f on the interval, and every x where it happens.",
+      "latex": "f(x) = - x^{3} + 12 x,\\quad x \\in [0,\\,3]",
+      "answer": {
+        "kind": "extremum",
+        "extremum": "max",
+        "value": "16",
+        "at": [
+          "2"
+        ]
+      },
+      "answer_latex": "\\text{absolute maximum } = 16 \\text{ at } x = 2",
+      "input_help": "Enter the value, then the x-value(s). Separate several x-values with commas.",
+      "hint": "Candidates are the critical points inside the interval and both endpoints. Evaluate f at all of them.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 12 - 3 x^{2} = - 3 \\left(x - 2\\right) \\left(x + 2\\right)"
+        },
+        {
+          "text": "Critical points inside [0, 3].",
+          "latex": "x = 2"
+        },
+        {
+          "text": "Evaluate at the critical points and both endpoints.",
+          "latex": "f(0) = 0,\\; f(2) = 16,\\; f(3) = 9"
+        },
+        {
+          "text": "Compare.",
+          "latex": "\\text{absolute maximum } = 16 \\text{ at } x = 2"
+        }
+      ],
+      "mcq": {
+        "prompt": "What is the absolute maximum of f on the interval, and where?",
+        "options": [
+          "\\text{absolute maximum } = 16 \\text{ at } x = 2",
+          "\\text{absolute maximum } = 17 \\text{ at } x = 2",
+          "\\text{absolute maximum } = 16 \\text{ at } x = 0",
+          "\\text{absolute maximum } = 0 \\text{ at } x = 0"
+        ],
+        "labels": [
+          null,
+          "Arithmetic error when evaluating f",
+          "Right value, wrong location",
+          "Found the minimum instead"
+        ],
+        "correct": 0
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez le maximum absolu de f sur l'intervalle, et toutes les valeurs de x où il est atteint.",
+          "input_help": "Saisissez la valeur, puis la ou les valeurs de x. Séparez plusieurs valeurs de x par des virgules.",
+          "hint": "Les candidats sont les points critiques dans l'intervalle et les deux bornes. Évaluez f en chacun d'eux.",
+          "answer_latex": "\\text{maximum absolu } = 16 \\text{ en } x = 2",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 12 - 3 x^{2} = - 3 \\left(x - 2\\right) \\left(x + 2\\right)"
+            },
+            {
+              "text": "Points critiques dans [0, 3].",
+              "latex": "x = 2"
+            },
+            {
+              "text": "Évaluer aux points critiques et aux deux bornes.",
+              "latex": "f(0) = 0,\\; f(2) = 16,\\; f(3) = 9"
+            },
+            {
+              "text": "Comparer.",
+              "latex": "\\text{maximum absolu } = 16 \\text{ en } x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quel est le maximum absolu de f sur l'intervalle, et où est-il atteint ?",
+            "options": [
+              "\\text{maximum absolu } = 16 \\text{ en } x = 2",
+              "\\text{maximum absolu } = 17 \\text{ en } x = 2",
+              "\\text{maximum absolu } = 16 \\text{ en } x = 0",
+              "\\text{maximum absolu } = 0 \\text{ en } x = 0"
+            ],
+            "labels": [
+              null,
+              "Erreur de calcul en évaluant f",
+              "Bonne valeur, mauvais point",
+              "A trouvé le minimum à la place"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova il massimo assoluto di f sull'intervallo e tutti i valori di x in cui si raggiunge.",
+          "input_help": "Inserisci il valore, poi il valore o i valori di x. Separa più valori di x con virgole.",
+          "hint": "I candidati sono i punti critici interni all'intervallo e i due estremi. Valuta f in ciascuno.",
+          "answer_latex": "\\text{massimo assoluto } = 16 \\text{ in } x = 2",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 12 - 3 x^{2} = - 3 \\left(x - 2\\right) \\left(x + 2\\right)"
+            },
+            {
+              "text": "Punti critici interni a [0, 3].",
+              "latex": "x = 2"
+            },
+            {
+              "text": "Valuta nei punti critici e nei due estremi.",
+              "latex": "f(0) = 0,\\; f(2) = 16,\\; f(3) = 9"
+            },
+            {
+              "text": "Confronta.",
+              "latex": "\\text{massimo assoluto } = 16 \\text{ in } x = 2"
+            }
+          ],
+          "mcq": {
+            "prompt": "Qual è il massimo assoluto di f sull'intervallo, e dove si raggiunge?",
+            "options": [
+              "\\text{massimo assoluto } = 16 \\text{ in } x = 2",
+              "\\text{massimo assoluto } = 17 \\text{ in } x = 2",
+              "\\text{massimo assoluto } = 16 \\text{ in } x = 0",
+              "\\text{massimo assoluto } = 0 \\text{ in } x = 0"
+            ],
+            "labels": [
+              null,
+              "Errore di calcolo nel valutare f",
+              "Valore giusto, punto sbagliato",
+              "Ha trovato invece il minimo"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "yt-int-09",
+      "topic": "closed-interval",
+      "difficulty": 2,
+      "prompt": "Find the absolute minimum of f on the interval, and every x where it happens.",
+      "latex": "f(x) = x^{3} - 12 x + 3,\\quad x \\in [-3,\\,1]",
+      "answer": {
+        "kind": "extremum",
+        "extremum": "min",
+        "value": "-8",
+        "at": [
+          "1"
+        ]
+      },
+      "answer_latex": "\\text{absolute minimum } = -8 \\text{ at } x = 1",
+      "input_help": "Enter the value, then the x-value(s). Separate several x-values with commas.",
+      "hint": "Candidates are the critical points inside the interval and both endpoints. Evaluate f at all of them.",
+      "solution": [
+        {
+          "text": "Differentiate.",
+          "latex": "f'(x) = 3 x^{2} - 12 = 3 \\left(x - 2\\right) \\left(x + 2\\right)"
+        },
+        {
+          "text": "Critical points inside [-3, 1].",
+          "latex": "x = -2"
+        },
+        {
+          "text": "Evaluate at the critical points and both endpoints.",
+          "latex": "f(-3) = 12,\\; f(-2) = 19,\\; f(1) = -8"
+        },
+        {
+          "text": "Compare.",
+          "latex": "\\text{absolute minimum } = -8 \\text{ at } x = 1"
+        }
+      ],
+      "mcq": {
+        "prompt": "What is the absolute minimum of f on the interval, and where?",
+        "options": [
+          "\\text{absolute minimum } = -8 \\text{ at } x = -3",
+          "\\text{absolute minimum } = 19 \\text{ at } x = -2",
+          "\\text{absolute minimum } = -8 \\text{ at } x = 1",
+          "\\text{absolute minimum } = -13 \\text{ at } x = 2"
+        ],
+        "labels": [
+          "Right value, wrong location",
+          "Forgot to evaluate the interval endpoints",
+          null,
+          "Used a critical point outside the interval"
+        ],
+        "correct": 2
+      },
+      "verification": {
+        "checker": "sympy 1.14.0",
+        "status": "verified"
+      },
+      "i18n": {
+        "fr": {
+          "prompt": "Trouvez le minimum absolu de f sur l'intervalle, et toutes les valeurs de x où il est atteint.",
+          "input_help": "Saisissez la valeur, puis la ou les valeurs de x. Séparez plusieurs valeurs de x par des virgules.",
+          "hint": "Les candidats sont les points critiques dans l'intervalle et les deux bornes. Évaluez f en chacun d'eux.",
+          "answer_latex": "\\text{minimum absolu } = -8 \\text{ en } x = 1",
+          "solution": [
+            {
+              "text": "Dériver.",
+              "latex": "f'(x) = 3 x^{2} - 12 = 3 \\left(x - 2\\right) \\left(x + 2\\right)"
+            },
+            {
+              "text": "Points critiques dans [-3, 1].",
+              "latex": "x = -2"
+            },
+            {
+              "text": "Évaluer aux points critiques et aux deux bornes.",
+              "latex": "f(-3) = 12,\\; f(-2) = 19,\\; f(1) = -8"
+            },
+            {
+              "text": "Comparer.",
+              "latex": "\\text{minimum absolu } = -8 \\text{ en } x = 1"
+            }
+          ],
+          "mcq": {
+            "prompt": "Quel est le minimum absolu de f sur l'intervalle, et où est-il atteint ?",
+            "options": [
+              "\\text{minimum absolu } = -8 \\text{ en } x = -3",
+              "\\text{minimum absolu } = 19 \\text{ en } x = -2",
+              "\\text{minimum absolu } = -8 \\text{ en } x = 1",
+              "\\text{minimum absolu } = -13 \\text{ en } x = 2"
+            ],
+            "labels": [
+              "Bonne valeur, mauvais point",
+              "A oublié d'évaluer les bornes de l'intervalle",
+              null,
+              "A utilisé un point critique hors de l'intervalle"
+            ]
+          }
+        },
+        "it": {
+          "prompt": "Trova il minimo assoluto di f sull'intervallo e tutti i valori di x in cui si raggiunge.",
+          "input_help": "Inserisci il valore, poi il valore o i valori di x. Separa più valori di x con virgole.",
+          "hint": "I candidati sono i punti critici interni all'intervallo e i due estremi. Valuta f in ciascuno.",
+          "answer_latex": "\\text{minimo assoluto } = -8 \\text{ in } x = 1",
+          "solution": [
+            {
+              "text": "Deriva.",
+              "latex": "f'(x) = 3 x^{2} - 12 = 3 \\left(x - 2\\right) \\left(x + 2\\right)"
+            },
+            {
+              "text": "Punti critici interni a [-3, 1].",
+              "latex": "x = -2"
+            },
+            {
+              "text": "Valuta nei punti critici e nei due estremi.",
+              "latex": "f(-3) = 12,\\; f(-2) = 19,\\; f(1) = -8"
+            },
+            {
+              "text": "Confronta.",
+              "latex": "\\text{minimo assoluto } = -8 \\text{ in } x = 1"
+            }
+          ],
+          "mcq": {
+            "prompt": "Qual è il minimo assoluto di f sull'intervallo, e dove si raggiunge?",
+            "options": [
+              "\\text{minimo assoluto } = -8 \\text{ in } x = -3",
+              "\\text{minimo assoluto } = 19 \\text{ in } x = -2",
+              "\\text{minimo assoluto } = -8 \\text{ in } x = 1",
+              "\\text{minimo assoluto } = -13 \\text{ in } x = 2"
+            ],
+            "labels": [
+              "Valore giusto, punto sbagliato",
+              "Ha dimenticato di valutare gli estremi dell'intervallo",
+              null,
+              "Ha usato un punto critico fuori dall'intervallo"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
